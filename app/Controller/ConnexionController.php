@@ -13,7 +13,7 @@ class ConnexionController extends Controller
 
 
 
-		$this->show('connexion/index');
+		$this->show('connexion/etudiant');
 	}
 
 }
