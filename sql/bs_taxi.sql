@@ -36,7 +36,7 @@ CREATE TABLE `users` (
   `updated_at` datetime NOT NULL,
   `role` varchar(100) DEFAULT NULL,
   `firstname` varchar(45) NOT NULL,
-  `lastname` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -74,7 +74,7 @@ INSERT INTO `cours` (`id`, `title`, `theme_id`, `created_at`) VALUES
 
 CREATE TABLE `theme` (
   `id` int(11) NOT NULL,
-  `name` varchar(55) NOT NULL,
+  `name` varchar(55) NOT NULL
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
