@@ -60,19 +60,19 @@
 						<a href="#page-top"></a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#services">Services</a>
+						<a class="page-scroll" href="#services">Le Métier</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#portfolio">Portfolio</a>
+						<a class="page-scroll" href="#portfolio">La Formation</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#about">About</a>
+						<a class="page-scroll" href="#about">Contact</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#team">Formateurs</a>
+						<a class="page-scroll" href="#team">Financement</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#connexion">Connexion</a>
+						<a class="page-scroll" href="#connexion">Se Connecter</a>
 					</li>
 				</ul>
 			</div>
