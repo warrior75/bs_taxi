@@ -2,4 +2,6 @@
 	
 	$w_routes = array(
 		['GET', '/', 'Default#home', 'home'],
+		['POST', '/connexion', 'Connexion#index', 'connexion'],
+
 	);
