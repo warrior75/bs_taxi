@@ -320,11 +320,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-<<<<<<< HEAD
+
                     <form method="POST"  action="<?php echo $this->url('connexion') ; ?>">
-=======
-                    <form method="POST"  action="<?= $this->url('connexion')?>" id="connexionForm">
->>>>>>> 905e24c2d85356e235f060156904607e0a0ff3c9
+
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <div class="form-group">
