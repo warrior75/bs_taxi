@@ -43,8 +43,8 @@ CREATE TABLE `users` (
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `token`, `expire_token`, `created_at`, `updated_at`, `role`, `firstname`, `lastname`) VALUES
-();
+-- INSERT INTO `users` (`id`, `email`, `password`, `token`, `expire_token`, `created_at`, `updated_at`, `role`, `firstname`, `lastname`) VALUES
+-- ();
 
 -- --------------------------------------------------------
 
@@ -63,8 +63,8 @@ CREATE TABLE `cours` (
 -- Contenu de la table `cours`
 --
 
-INSERT INTO `cours` (`id`, `title`, `theme_id`, `created_at`) VALUES
-();
+-- INSERT INTO `cours` (`id`, `title`, `theme_id`, `created_at`) VALUES
+-- ();
 
 -- --------------------------------------------------------
 
@@ -82,8 +82,8 @@ CREATE TABLE `theme` (
 -- Contenu de la table `theme`
 --
 
-INSERT INTO `theme` (`id`, `name`) VALUES
-();
+-- INSERT INTO `theme` (`id`, `name`) VALUES
+-- ();
 -- --------------------------------------------------------
 
 --
@@ -100,8 +100,8 @@ CREATE TABLE `session` (
 -- Contenu de la table `session`
 --
 
-INSERT INTO `session` (`id`, `name`, `progression`) VALUES
-();
+-- INSERT INTO `session` (`id`, `name`, `progression`) VALUES
+-- ();
 
 --
 -- Index pour les tables exportées
