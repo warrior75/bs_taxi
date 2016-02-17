@@ -114,11 +114,12 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
+                        <li><a id="inline" href="#cgv">Privacy Policy</a>
                         </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li><a id="inline2" href="#cgu">Terms of Use</a>
                         </li>
                     </ul>
+              
                 </div>
             </div>
         </div>
@@ -298,9 +299,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
-
+    
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="<?= $this->assetUrl('js/classie.js') ?>"></script>
     <script src="<?= $this->assetUrl('js/cbpAnimatedHeader.js') ?>"></script>
 
@@ -310,6 +312,12 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="<?= $this->assetUrl('js/agency.js') ?>"></script>
+
+    <!-- main.js -->
+    <script src="<?= $this->assetUrl('js/main.js') ?>"></script>
+
+    <!-- FancyBox -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 	
 </body>
 </html>
