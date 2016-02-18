@@ -303,6 +303,7 @@
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="<?= $this->assetUrl('js/classie.js') ?>"></script>
     <script src="<?= $this->assetUrl('js/cbpAnimatedHeader.js') ?>"></script>
 

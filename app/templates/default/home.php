@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">La Formation</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
                         <div class="row">
@@ -64,11 +64,12 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
+                                    <h4>Condition d'accès à la formation</h4>
+                                    
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">• être titulaire du permis B depuis au moins trois ans (ce qui implique que l’âge minimal pour être taxi est de 21 ans) et ne pas avoir commis d’infraction ou de retrait du permis pour conduite en état d’ivresse ou autre délit grave, <br>• passer une visite médicale obligatoire,<br>• avoir un casier judiciaire vierge,<br>• avoir passé un diplôme de secourisme : la formation Prévention et secours civiques de niveau 1 (PSC1)
+</p>
                                 </div>
                             </div>
                         </li>
@@ -78,11 +79,12 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
+                                    <h4>Formation nécessaire</h4>
+                                    
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">Le CCPCT s’obtient après une formation sanctionnée par un examen en deux parties <br>(nationale et départementale), comportant des épreuves théoriques et pratiques. <br>L’examen départemental n’est valable que dans le département dans lequel exerce le <br>chauffeur de taxi. Pour pouvoir exercer dans un autre département, il faut repasser la <br>partie départementale de l’examen dans le département désiré.<br>Une fois le certificat de capacité professionnelle obtenu, la préfecture délivre la carte <br>professionnelle de conducteur de taxi.
+</p>
                                 </div>
                             </div>
                         </li>
@@ -92,11 +94,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
+                                    <h4>Durée de la formation</h4>
+                                    
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">La formation qui prépare à l’examen dure entre 200 et 400 heures (certaines matières <br>sont optionnelles), sur une période de 3 à 6 mois, en fonction des capacités et des <br>disponibilités du candidat. Elle est dispensée soit dans un centre de formation en sessions <br>collectives ou bien à titre individuel, en candidat libre.</p>
                                 </div>
                             </div>
                         </li>
@@ -106,19 +108,19 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                    <h4>Composition de l’examen</h4>
+                                   
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">• une épreuve d’admissibilité : l’épreuve nationale (connaissance de la langue française, <br>réglementation nationale de la profession, gestion, code de la route, sécurité).<br>• une épreuve d’admission : l’épreuve locale ou départementale (connaissance <br>topographique, réglementation locale, itinéraires, conduite d’un véhicule taxi, <br>mémorisation d’adresses, connaissance des monuments, bâtiments publics, <br>administrations…).</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Faites parti
-                                    <br>De Notre
-                                    <br>Histoire!</h4>
+                                <h4>Qu'attendez
+                                    <br>Vous
+                                    <br>Pour être Taxi!</h4>
                             </div>
                         </li>
                     </ul>
@@ -134,7 +136,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Financement</h2>
-                    <h3 class="section-subheading text-muted">Contact</h3>
+                    <h3 class="section-subheading text-muted">Coût moyen de la formation de taxi initiale : <br>2000€ TTC pour une formation complète aux examens.<br>Les frais de formation peuvent être pris en charge, totalement ou partiellement via :</h3>
                 </div>
             </div>
  <div class="row">
@@ -142,84 +144,47 @@
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                
                             </div>
                         </div>
                         <img src="<?= $this->assetUrl('img/portfolio/roundicons.png') ?>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
+                        <h4>POE</h4>
+                        <p class="text-muted">Préparation Opérationnelle à l’Emploi, en lien avec Pôle Emploi</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                
                             </div>
                         </div>
                         <img src="<?= $this->assetUrl('img/portfolio/startup-framework.png') ?>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>AIF</h4>
+                        <p class="text-muted">Aide Individuelle à la Formation</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                
                             </div>
                         </div>
                         <img src="<?= $this->assetUrl('img/portfolio/treehouse.png') ?>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>BRED</h4>
+                        <p class="text-muted">partenaire bancaire  pour un prêt « étudiant » remboursable après la fin de la formation.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="<?= $this->assetUrl('img/portfolio/golden.png') ?>" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="<?= $this->assetUrl('img/portfolio/escape.png') ?>" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="<?= $this->assetUrl('img/portfolio/dream.png') ?>" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
+                
+                
+               
     </section>
 
     <!-- Team Section -->
@@ -232,51 +197,53 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="<?= $this->assetUrl('img/team/1.jpg') ?>" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-sm-6">
+                    <h3>Nous trouver :</h3>
+                    <p class="text-muted">BS Taxi<br>
+                                                    10 rue du Paradis <br>
+                                                     75001 Paris</p>
+                    <div id="map"></div>
+
                 </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="<?= $this->assetUrl('img/team/2.jpg') ?>" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-sm-6">
+                    <form class="form-horizontal" role="form" method="post" action="index.php">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="message" class="col-sm-2 control-label">Message</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="4" name="message"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            
+        </div>
+    </div>
+</form>
                 </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="<?= $this->assetUrl('img/team/3.jpg') ?>" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
