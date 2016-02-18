@@ -26,7 +26,7 @@ console.log("DOM Chargé");
 function initialiserGoogleMap(latitude, longitude) {
 		var config = {
 			'center': new google.maps.LatLng(latitude, longitude),
-			'zoom': 5,
+			'zoom': 17,
 			'mapTypeId': google.maps.MapTypeId.ROADMAP
 		};
 
@@ -40,6 +40,7 @@ function initialiserGoogleMap(latitude, longitude) {
 			'title': 'Vous êtes là !'
 		});
 	}
+	initialiserGoogleMap(48.8743634,2.3529214);
 
 
 

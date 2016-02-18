@@ -129,6 +129,32 @@
 
         </div>
     </section>
+    <aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="<?= $this->assetUrl('img/logos/envato.jpg') ?>" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="<?= $this->assetUrl('img/logos/designmodo.jpg') ?>" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="<?= $this->assetUrl('img/logos/themeforest.jpg') ?>" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="<?= $this->assetUrl('img/logos/creative-market.jpg') ?>" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     <!-- About Section -->
     <section id="financement">
@@ -147,7 +173,7 @@
                                 
                             </div>
                         </div>
-                        <img src="<?= $this->assetUrl('img/portfolio/roundicons.png') ?>" class="img-responsive" alt="">
+                        <img src="<?= $this->assetUrl('img/financement/PO.jpg') ?>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>POE</h4>
@@ -161,7 +187,7 @@
                                 
                             </div>
                         </div>
-                        <img src="<?= $this->assetUrl('img/portfolio/startup-framework.png') ?>" class="img-responsive" alt="">
+                        <img src="<?= $this->assetUrl('img/financement/aif.jpg') ?>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>AIF</h4>
@@ -175,7 +201,7 @@
                                 
                             </div>
                         </div>
-                        <img src="<?= $this->assetUrl('img/portfolio/treehouse.png') ?>" class="img-responsive" alt="">
+                        <img src="<?= $this->assetUrl('img/financement/bred.png') ?>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>BRED</h4>
@@ -201,7 +227,7 @@
                     <h3>Nous trouver :</h3>
                     <p class="text-muted">BS Taxi<br>
                                                     10 rue du Paradis <br>
-                                                     75001 Paris</p>
+                                                     75010 Paris</p>
                     <div id="map"></div>
 
                 </div>
