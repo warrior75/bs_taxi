@@ -66,10 +66,10 @@
 						<a class="page-scroll" href="#formation">La Formation</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#contact">Contact</a>
+						<a class="page-scroll" href="#financement">Financement</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#financement">Financement</a>
+						<a class="page-scroll" href="#contact">Contact</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="#connexion">Se Connecter</a>
