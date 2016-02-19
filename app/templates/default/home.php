@@ -203,7 +203,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>BRED</h4>
-                        <p class="text-muted">partenaire bancaire  pour un prêt « étudiant » remboursable après la fin de la formation.</p>
+                        <p class="text-muted">Partenaire bancaire  pour un prêt « étudiant » remboursable après la fin de la formation.</p>
                     </div>
                 </div>
                 
