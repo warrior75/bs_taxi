@@ -30,3 +30,23 @@
 	height: 230px;
 }
 
+.navbar-connexion {
+	background-color: #222;
+    padding: 10px 0;
+	border: 0;
+	}
+
+.navbar-connexion .navbar-header {
+	background-color: #222;
+    padding: 10px 0;
+	border: 0;
+	font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+	}
+
+.nav .Snavbar-nav .navbar-right .nav li a {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}

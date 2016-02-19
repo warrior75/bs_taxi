@@ -72,7 +72,7 @@
 						<a class="page-scroll" href="#contact">Contact</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#connexion">Se Connecter</a>
+						<a class="page-scroll" href="<?= $this->url('connexion'); ?>">Se Connecter</a>
 					</li>
 				</ul>
 			</div>

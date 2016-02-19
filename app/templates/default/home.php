@@ -68,8 +68,7 @@
                                     
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">• être titulaire du permis B depuis au moins trois ans (ce qui implique que l’âge minimal pour être taxi est de 21 ans) et ne pas avoir commis d’infraction ou de retrait du permis pour conduite en état d’ivresse ou autre délit grave, <br>• passer une visite médicale obligatoire,<br>• avoir un casier judiciaire vierge,<br>• avoir passé un diplôme de secourisme : la formation Prévention et secours civiques de niveau 1 (PSC1)
-</p>
+                                    <p class="text-muted">• être titulaire du permis B depuis au moins trois ans (ce qui implique que l’âge minimal pour être taxi est de 21 ans) et ne pas avoir commis d’infraction ou de retrait du permis pour conduite en état d’ivresse ou autre délit grave, <br>• passer une visite médicale obligatoire,<br>• avoir un casier judiciaire vierge,<br>• avoir passé un diplôme de secourisme : la formation Prévention et secours civiques de niveau 1 (PSC1)</p>
                                 </div>
                             </div>
                         </li>
@@ -83,8 +82,7 @@
                                     
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Le CCPCT s’obtient après une formation sanctionnée par un examen en deux parties <br>(nationale et départementale), comportant des épreuves théoriques et pratiques. <br>L’examen départemental n’est valable que dans le département dans lequel exerce le <br>chauffeur de taxi. Pour pouvoir exercer dans un autre département, il faut repasser la <br>partie départementale de l’examen dans le département désiré.<br>Une fois le certificat de capacité professionnelle obtenu, la préfecture délivre la carte <br>professionnelle de conducteur de taxi.
-</p>
+                                    <p class="text-muted">Le CCPCT s’obtient après une formation sanctionnée par un examen en deux parties <br>(nationale et départementale), comportant des épreuves théoriques et pratiques. <br>L’examen départemental n’est valable que dans le département dans lequel exerce le <br>chauffeur de taxi. Pour pouvoir exercer dans un autre département, il faut repasser la <br>partie départementale de l’examen dans le département désiré.<br>Une fois le certificat de capacité professionnelle obtenu, la préfecture délivre la carte <br>professionnelle de conducteur de taxi.</p>
                                 </div>
                             </div>
                         </li>

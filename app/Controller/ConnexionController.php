@@ -69,5 +69,9 @@ protected $dbh;
 		}
 
 	}
+	public function pageConnexion()
+	{
+		$this->show('connexion/pageConnexion');
+	}
 
 }
