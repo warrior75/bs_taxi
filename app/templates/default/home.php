@@ -110,7 +110,7 @@
                                    
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">• une épreuve d’admissibilité : l’épreuve nationale (connaissance de la langue française, <br>réglementation nationale de la profession, gestion, code de la route, sécurité).<br>• une épreuve d’admission : l’épreuve locale ou départementale (connaissance <br>topographique, réglementation locale, itinéraires, conduite d’un véhicule taxi, <br>mémorisation d’adresses, connaissance des monuments, bâtiments publics, <br>administrations…).</p>
+                                    <p class="text-muted">U_ne épreuve d’admissibilité : l’épreuve nationale (connaissance de la langue française, <br>réglementation nationale de la profession, gestion, code de la route, sécurité).<br>• une épreuve d’admission : l’épreuve locale ou départementale (connaissance <br>topographique, réglementation locale, itinéraires, conduite d’un véhicule taxi, <br>mémorisation d’adresses, connaissance des monuments, bâtiments publics, <br>administrations…).</p>
                                 </div>
                             </div>
                         </li>
@@ -217,7 +217,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">contact</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h2>
+                    <h3 class="section-subheading text-muted">Contactez-nous pour avoir des informations complémentaires</h2>
                 </div>
             </div>
             <div class="row">
@@ -226,12 +226,7 @@
                     <p class="text-muted">BS Taxi<br>
                                                     10 rue du Paradis <br>
                                                      75010 Paris</p>
-                                                     <div class="row">
-                                                        
-                                                            <div id="map" class="col-md-4">
-                                                            </div>
-                                                       
-                                                     </div>
+                    <div id="map"></div>
 
                 </div>
                 <div class="col-sm-6">
