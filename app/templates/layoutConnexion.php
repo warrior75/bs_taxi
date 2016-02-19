@@ -50,7 +50,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top">Formation Taxi</a>
+				<a class="navbar-brand page-scroll" href="<?= $this->url('home'); ?>">Formation Taxi</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,7 +60,7 @@
 						<a href="#page-top"></a>
 					</li>
 					<li>
-						<a class="page-scroll" href="<?= $this->url('home'    ); ?>">Le Métier</a>
+						<a class="page-scroll" href="<?= $this->url('home'); ?>">Le Métier</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="<?= $this->url('home'); ?>">La Formation</a>
