@@ -226,7 +226,12 @@
                     <p class="text-muted">BS Taxi<br>
                                                     10 rue du Paradis <br>
                                                      75010 Paris</p>
-                    <div id="map"></div>
+                                                     <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div id="map">
+                                                            </div>
+                                                        </div>
+                                                     </div>
 
                 </div>
                 <div class="col-sm-6">
