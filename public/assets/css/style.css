@@ -49,8 +49,13 @@
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
-}
+} 	
 
 section-subheading text-muted {
 	color: black;
+}
+
+.formulaire{
+	padding-top: 0px;
+	margin-top: 0px;
 }
