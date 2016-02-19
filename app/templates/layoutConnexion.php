@@ -81,7 +81,7 @@
 		<!-- /.container-fluid -->
 	</nav>
 
-		<section>
+		<section class="formulaire">
 			<?= $this->section('main_content')?>
 		</section>
 
