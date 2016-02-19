@@ -227,10 +227,10 @@
                                                     10 rue du Paradis <br>
                                                      75010 Paris</p>
                                                      <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div id="map">
+                                                        
+                                                            <div id="map" class="col-md-4">
                                                             </div>
-                                                        </div>
+                                                       
                                                      </div>
 
                 </div>
