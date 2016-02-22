@@ -6,6 +6,8 @@ use \W\Controller\Controller;
 use \W\Manager\UserManager;
 use \W\Security\AuthentificationManager;
 use \DateTime;
+use \PHPMailer;
+
 
 class AdminController extends Controller
 {
@@ -71,16 +73,25 @@ class AdminController extends Controller
 				]);
 
                	$mail = new PHPMailer;
-				$mail->isSMTP();                                     
-				$mail->Host = 'meslem.bellal@gmail.com';  
-				$mail->SMTPAuth = true;                               
-				$mail->setFrom('from@example.com', 'Mailer');
-				$mail->addAddress($email, 'Joe User');    
+				$mail->isSMTP();    
+				$mail->SMTPAuth = true;                                  
+				$mail->Host = 'smtp.gmail.com';  
+				$mail->SMTPAuth = true;  
+				$mail->SMTPSecure = 'tls';                           
+				$mail->Port = 587;                              
+				$mail->setFrom('meslem.bellal@gmail.com', 'Mailer');
+				$mail->addAddress($email);    
 				$mail->addReplyTo('meslem.bellal@gmail.com');
 				$mail->isHTML(true);                                  
 				$mail->Subject = 'confirmation d\'inscription';
 				$mail->Body    = "Votre identifiant : <?php echo $email; ?> <br>
 				Votre mot de passe : <?php echo $password ?>";
+				if(!$mail->send()) {
+    				echo 'Message could not be sent.';
+   					 echo 'Mailer Error: ' . $mail->ErrorInfo;
+				} else {
+    				echo 'Message has been sent';
+				}
 
 				if($resultUser){
 					$this->show('admin/index');
