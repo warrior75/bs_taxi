@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $this->e($title) ?></title>
+    <title> <?= $this->e($title) ?> </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?= $this->assetUrl('css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -37,63 +37,54 @@
 
 </head>
 <body id="page-top" class="index">
-	
+    
 
-	<!-- Navigation -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header page-scroll">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar">Ajouter Utilisateur</span>
-					<span class="icon-bar">Options</span>
-					<span class="icon-bar">Vue générale</span>
-				</button>
-				<a class="navbar-brand page-scroll" href="#page-top">Espace Administrateur</a>
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="hidden">
-						<a href="#page-top"></a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#add-user">Ajouter Utilisateur</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#formation"></a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#financement">Financement</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#contact">Contact</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="<?= $this->url('connexion'); ?>">Se Connecter</a>
-					</li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-        <!-- Header -->
-    <header class="container-admin">
+    <!-- Navigation -->
+    <nav class="navbar-connexion">
         <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Bienvenue sur site de formation de taxi !</div>
-                <div class="intro-heading">It's Nice To Meet You</div>
-                <a href="#services" class="page-scroll btn btn-xl">En savoir plus</a>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="<?= $this->url('home'); ?>">Formation Taxi</a>
             </div>
-        </div>
-    </header>
 
-    <section>
-            <?= $this->section('main_content') ?>
-    </section>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="<?= $this->url('home'); ?>">Le Métier</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="<?= $this->url('home'); ?>">La Formation</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="<?= $this->url('home'); ?>">Financement</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="<?= $this->url('home'); ?>">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="<?= $this->url('connexion'); ?>">Se Connecter</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+        <section class="formulaire">
+            <?= $this->section('main_content')?>
+        </section>
+
         <footer>
         <div class="container">
             <div class="row">
@@ -122,7 +113,9 @@
             </div>
         </div>
     </footer>
-	
+
+
+
     <!-- jQuery -->
     <script src="<?= $this->assetUrl('js/jquery.js') ?>"></script>
 
@@ -148,6 +141,6 @@
 
     <!-- FancyBox -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-	
+    
 </body>
 </html>
