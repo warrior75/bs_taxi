@@ -72,7 +72,7 @@ class AdminController extends Controller
 					'updated_at' => $date->format('Y-m-s H:i:s')
 				]);
 
-               	$mail = new PHPMailer;
+               	$mail = new PHPMailer();
 				$mail->isSMTP();    
 				$mail->SMTPAuth = true;                                  
 				$mail->Host = 'smtp.gmail.com';  
