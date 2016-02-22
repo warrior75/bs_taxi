@@ -62,3 +62,22 @@ section-subheading text-muted {
 footer{
 	padding-top:5px;
 }
+
+.container-admin{
+	padding: 0;
+	margin: 0;
+	background-image: url('../img/backgroundAdmin.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.role {
+	background-color: black;
+}
+.index{
+	background-color: rgb(230,230,230);
+}
+
+#add-user{
+	padding: 35px; 
+}

@@ -5,6 +5,7 @@
 		['POST', '/formConnexion', 'Connexion#index', 'formConnexion'],
 		['GET', '/connexion', 'Connexion#pageConnexion', 'connexion'],
 		['GET', '/admin', 'Admin#index', 'admin'],
+		['POST', '/admin/register', 'Admin#register', 'register'],
 
 
 	);
