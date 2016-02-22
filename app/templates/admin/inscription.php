@@ -17,14 +17,14 @@
                             <div class="col-md-4 col-md-offset-4">
                                 <div class="form-group">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nom *" name="firstname" id="firstname" required data-validation-required-message="Veuillez saissir votre Nom *">
+                                    <input type="text" class="form-control" placeholder="Prénom *" name="firstname" id="firstname" required data-validation-required-message="Veuillez saissir votre prénom *">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Prénom *" name="lastname" id="lastname" required data-validation-required-message="Veuillez saissir votre Prénom">
+                                    <input type="text" class="form-control" placeholder="Nom *" name="lastname" id="lastname" required data-validation-required-message="Veuillez saissir votre nom">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                    <input type="email" class="form-control" placeholder="Email *" name="email" id="email" required data-validation-required-message="Veuillez saisir votre adresse emai">
+                                    <input type="email" class="form-control" placeholder="Email *" name="email" id="email" required data-validation-required-message="Veuillez saisir votre adresse email">
                                     <p class="help-block text-danger"></p>
                                 </div>
                            
@@ -38,7 +38,7 @@
 
 
                             
-                                <button type="submit" name="action" class="btn btn-primary">Ajouter</button>
+                                <button type="submit" name="addUser" class="btn btn-primary">Ajouter</button>
                             
                         </div>
                     </form>
