@@ -12,7 +12,17 @@ class AdminController extends Controller
 	 */
 	public function index()
 	{
-		$this->show('connexion/admin');
+		$this->show('admin/index');
+	}
+
+	// Traitement du formulaire d'inscription
+	public function register(){
+
+	}
+
+	// Affiche la page du formulaire d'inscription
+	public function inscription(){
+		$this->show('admin/inscription');
 	}
 
 }

@@ -60,7 +60,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?= $this->url('home'); ?>">Le Métier</a>
+                        <a class="page-scroll" href="<?= $this->url('inscription'); ?>">Ajouter Utilisateur</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?= $this->url('home'); ?>">La Formation</a>
