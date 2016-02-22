@@ -10,11 +10,14 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-
+              
                     <form method="POST"  action="<?php echo $this->url('register') ; ?>">
-
+    
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4">
+                              <?php if (isset($infos)) : ?>
+                                <p class="bg-success" ><?php echo $infos; ?></p>
+                             <?php endif; ?>
                                 <div class="form-group">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Prénom *" name="firstname" id="firstname" required data-validation-required-message="Veuillez saissir votre prénom *">
@@ -36,8 +39,6 @@
                                     </select>
                                 </div>
 
-
-                            
                                 <button type="submit" name="addUser" class="btn btn-primary">Ajouter</button>
                             
                         </div>
