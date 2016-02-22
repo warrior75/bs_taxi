@@ -21,9 +21,6 @@
     <link href="<?= $this->assetUrl('css/timeline.css') ?>" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="<?= $this->assetUrl('css/agency.css') ?>" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="<?= $this->assetUrl('css/sb-admin-2.css') ?>" rel="stylesheet">
 
     <!-- Morris Charts CSS -->

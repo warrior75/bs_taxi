@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Index']) ?>
+<?php $this->layout('layoutGeneral', ['title' => 'Index']) ?>
 
 <?php $this->start('main_content') ?>
 	<p>Vous êtes connécté</p>
