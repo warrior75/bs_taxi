@@ -70,12 +70,24 @@ class AdminController extends Controller
 					'updated_at' => $date->format('Y-m-s H:i:s')
 				]);
 
-
-			}
+               	$mail = new PHPMailer;
+				$mail->isSMTP();                                     
+				$mail->Host = 'meslem.bellal@gmail.com';  
+				$mail->SMTPAuth = true;                               
+				$mail->setFrom('from@example.com', 'Mailer');
+				$mail->addAddress($email, 'Joe User');    
+				$mail->addReplyTo('meslem.bellal@gmail.com');
+				$mail->isHTML(true);                                  
+				$mail->Subject = 'confirmation d\'inscription';
+				$mail->Body    = "Votre identifiant : <?php echo $email; ?> <br>
+				Votre mot de passe : <?php echo $password ?>";
 
 				if($resultUser){
 					$this->show('admin/index');
 				}
+			}else{
+				$this->show('admin/index',['errors' => $errors]);
+			}
 		}
 
 	}
