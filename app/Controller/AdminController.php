@@ -72,33 +72,6 @@ class AdminController extends Controller
 					'updated_at' => $date->format('Y-m-s H:i:s')
 				]);
 
-               	$mail = new PHPMailer();
-				$mail->isSMTP();    
-				$mail->SMTPAuth = true;                                  
-				$mail->Host = 'smtp.gmail.com';  
-				$mail->SMTPAuth = true;  
-				$mail->SMTPSecure = 'tls';                           
-				$mail->Port = 587;                              
-				$mail->setFrom('meslem.bellal@gmail.com', 'Mailer');
-				$mail->addAddress($email);    
-				$mail->addReplyTo('meslem.bellal@gmail.com');
-				$mail->isHTML(true);                                  
-				$mail->Subject = 'confirmation d\'inscription';
-				$mail->Body    = "Votre identifiant : <?php echo $email; ?> <br>
-				Votre mot de passe : <?php echo $password ?>";
-				if(!$mail->send()) {
-    				echo 'Message could not be sent.';
-   					 echo 'Mailer Error: ' . $mail->ErrorInfo;
-				} else {
-    				echo 'Message has been sent';
-				}
-
-				if($resultUser){
-					$this->show('admin/index');
-				}
-			}else{
-				$this->show('admin/index',['errors' => $errors]);
-			}
 		}
 
 	}
