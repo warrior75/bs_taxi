@@ -3,6 +3,9 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \W\Manager\UserManager;
+use \W\Security\AuthentificationManager;
+use \DateTime;
 
 class AdminController extends Controller
 {
@@ -30,18 +33,49 @@ class AdminController extends Controller
 			$firstname = trim(htmlentities($_POST['firstname']));
 			$lastname = trim(htmlentities($_POST['lastname']));
 			$email = trim(htmlentities($_POST['email']));
-			$firstname = trim(htmlentities($_POST['firstname']));
-			$password = random_password();
-			$password_hash = password_hash($password); 
+			$password = $this->random_password();
+			$password_hash = password_hash($password,PASSWORD_DEFAULT); 
 			$role = trim(htmlentities($_POST['role']));
 
 			//Initialisation d'un tableau d'erreurs vide
 			$errors = [];
 
-			if(empty($firstname) ) {
+			// Instanciation d'un objet de type UseManager
+			$userManager = new userManager();
+			$userManager->setTable('users');
+
+			if(empty($email) || (filter_var($email,FILTER_VALIDATE_EMAIL))=== false){
+				$errors['email'] = "Adresse email incorect";
+			}elseif($userManager->emailExists($email)) {
+				$errors['email'] = "Cette adresse email existe déjà";
+			}
+
+			if(empty($lastname)){
+				$errors['lastname'] = "Veuillez renseigner le nom";
+			}
+
+			if(empty($firstname)){
+				$errors['firstname'] = "Veuillez renseigner le prénom";
+			}
+
+			if(empty($errors)){
+				$date = new DateTime();
+				$resultUser = $userManager->insert([
+					'email' => $email,
+					'firstname' => $firstname,
+					'lastname' => $lastname,
+					'password' => $password_hash,
+					'role' => $role,
+					'created_at' => $date->format('Y-m-s H:i:s'),
+					'updated_at' => $date->format('Y-m-s H:i:s')
+				]);
 
 
+			}
 
+				if($resultUser){
+					$this->show('admin/index');
+				}
 		}
 
 	}
