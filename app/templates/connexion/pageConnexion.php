@@ -13,11 +13,18 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
+               
 
-                    <form method="POST"  action="<?php echo $this->url('connexion') ; ?>">
+                    <form method="POST"  action="<?php echo $this->url('formConnexion') ; ?>">
 
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
+                                <?php if (isset($error['email'])) : ?>
+                                    <p class="bg-danger" ><?php echo $error['email']; ?></p>
+                                <?php endif; ?>
+                                <?php if (isset($error['password'])) : ?>
+                                    <p class="bg-danger" ><?php echo $error['password']; ?></p>
+                                <?php endif; ?>
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Votre Email *" name="email" id="email" required data-validation-required-message="Veuillez saisir votre adresse emai">
                                     <p class="help-block text-danger"></p>

@@ -82,3 +82,9 @@ footer{
 	padding-top: 100px; 
 	padding-bottom: 20px; 
 }
+
+.bg-danger{
+	background-color:red;
+	text-align: center;
+	border-radius : 5px;
+}

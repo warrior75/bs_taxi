@@ -12,6 +12,7 @@ class FormateurController extends Controller
 	 */
 	public function index()
 	{
+		$this->allowTo('formateur');
 		$this->show('formateur/index');
 	}
 

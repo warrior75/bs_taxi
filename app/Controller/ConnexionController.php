@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \W\Manager\Manager;
 use \W\Manager\UserManager;
 use \W\Security\AuthentificationManager;
 
@@ -18,6 +19,7 @@ protected $dbh;
 
 		if(isset($_POST['action'])){
 
+			print_r($_POST);
 			$email = trim(htmlentities($_POST['email']));
 			$password = trim(htmlentities($_POST['password']));
 
@@ -37,34 +39,34 @@ protected $dbh;
 				//  Teste si le mot de passe est valide
 				if($authentificationManager->isValidLoginInfo($email, $password)){
 
-					// Récupère le role de l'utilisateur 
-					$query = $dbh->prepare('SELECT role FROM users WHERE email = :email');
-					$query->bindValue(':email',$email,PDO::PARAM_STR);
-					$query->execute();
-					$role = $query->fetch();
-
+				$role = $resultUser['role'];
 
 					// Teste le role du user
 
 					if( $role === "admin"){
+						
+						$authentificationManager->logUserIn($resultUser);
 
-						$this->show('connexion/admin');
+						$this->redirectToRoute('admin');
+
 					}elseif($role === "formateur"){
 						$authentificationManager->logUserIn($resultUser);
-						$this->show('connexion/formateur');
+						$this->redirectToRoute('formateur');
 					}elseif($role === "etudiant"){
-
-						$this->show('connexion/etudiant');
+						$authentificationManager->logUserIn($resultUser);
+						$this->redirectToRoute('etudiant');
 					}
 
 
 
 				}else{
 					$error['password'] = "Erreur de mot de passe";
+					$this->show('connexion/pageConnexion',['error'=> $error]);
 				}
 
 			}else {
 				$error['email'] = "Erreur d'email";
+				$this->show('connexion/pageConnexion',['error'=> $error]);
 			}
 		}
 

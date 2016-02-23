@@ -17,9 +17,11 @@ class AdminController extends Controller
 	 */
 	public function index()
 	{
+		$this->allowTo('admin');
 		$this->show('admin/index');
 	}
 
+	// fonction privée qui génére un mdp aléatoire
 	private function random_password( $length = 8 ){ 
 		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?"; 
 		$password = substr( str_shuffle( $chars ), 0, $length ); 
@@ -60,6 +62,7 @@ class AdminController extends Controller
 				$errors['firstname'] = "Veuillez renseigner le prénom";
 			}
 
+			// S'il n'y a pas d'erreurs on insère un utilisateur en bdd
 			if(empty($errors)){
 				$date = new DateTime();
 				$resultUser = $userManager->insert([
