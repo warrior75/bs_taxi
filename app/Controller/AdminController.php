@@ -71,7 +71,7 @@ class AdminController extends Controller
 					'created_at' => $date->format('Y-m-s H:i:s'),
 					'updated_at' => $date->format('Y-m-s H:i:s')
 				]);
-			$infos = " Inscription réussie, identifiant: $email et le mot de passe : $password ";
+			$infos = " Inscription réussie <br> Identifiant: $email <br> Mot de passe : $password ";
 
 			$this->show('admin/inscription',['infos' => $infos]);
  
