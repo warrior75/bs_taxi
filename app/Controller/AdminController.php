@@ -37,7 +37,7 @@ class AdminController extends Controller
 			$firstname = trim(htmlentities($_POST['firstname']));
 			$lastname = trim(htmlentities($_POST['lastname']));
 			$email = trim(htmlentities($_POST['email']));
-			$$session_id = trim(htmlentities($_POST['session_id']));
+			$session_id = trim(htmlentities($_POST['session_id']));
 			$password = $this->random_password();
 			$password_hash = password_hash($password,PASSWORD_DEFAULT); 
 			$role = trim(htmlentities($_POST['role']));
