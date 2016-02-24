@@ -24,9 +24,7 @@ class EtudiantController extends Controller
 		// debug 
 		debug($connectedAdmin);
 
-		// new Manager
-
-		$this->update()
+	
 	}
 
 

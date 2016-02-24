@@ -34,8 +34,8 @@
                                     <select class="form-control" name="session_id">
                                         <option value="1">Janvier</option>
                                         <option value="2">Avril</option>
-                                        <option value="3" selected>Juin</option>
-                                        <option value="4" selected>Septembre</option>
+                                        <option value="3">Juin</option>
+                                        <option value="4">Septembre</option>
                                     </select>
                                 </div>
 
