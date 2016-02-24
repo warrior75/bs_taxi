@@ -87,4 +87,31 @@ class AdminController extends Controller
 		$this->show('admin/inscription');
 	}
 
+	// gestion des des cours et session
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
