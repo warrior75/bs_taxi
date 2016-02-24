@@ -68,11 +68,9 @@
                         <a class="page-scroll" href="<?= $this->url('home'); ?>">La Formation</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?= $this->url('home'); ?>">Financement</a>
+                        <a class="page-scroll" href="<?= $this->url('passwordForm'); ?>">Changer mot de passe</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="<?= $this->url('connexion'); ?>">Connexion</a>
-                    </li>
+                   
                     <li>
                         <a class="page-scroll" href="<?= $this->url('deconnexion'); ?>">Déconnexion</a>
                     </li>

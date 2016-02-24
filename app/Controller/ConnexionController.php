@@ -84,4 +84,70 @@ protected $dbh;
 		$this->redirectToRoute('home');
 	}
 
+	public function resetPassword(){
+
+		if(isset($_POST['reset'])){
+			$password = trim(htmlentities($_POST['password']));
+			$confirmPassword = trim(htmlentities($_POST['confirmPassword']));
+
+			// Initialisation d'un tableau d'erreurs
+			$error = [];
+
+			// Instanciation d'un objet de type userManager
+			$userManager = new userManager();
+			$userManager->setTable('users');
+
+			//Test si les champs ne sont pas trop court 
+			if(strlen($password) <= 6 ){
+				$error['password'] = 'Le mot de passe est trop court (minimum 6 caractères)';
+			}
+			//Test si les mdp ne correspondent pas
+			if($password != $confirmPassword){
+				$error['password'] = 'Les mots de passes ne sont pas identiques';
+			}
+
+			if(empty($error)){
+				// Récupération des infos utilisateur
+				$loggedUser = $this->getUser();
+				$password_hash = password_hash($password,PASSWORD_DEFAULT);
+				$id = $loggedUser['id'];
+				$resultUser = $userManager->update([
+					'password' => $password_hash
+				],$id);
+
+				if($resultUser){
+
+
+					$infos = "Le mot de passe a été changé avec succès";
+
+					$role = $loggedUser['role'];
+
+
+					if( $role === "admin"){
+						$this->show('admin/index',['infos' => $infos]);
+					}
+
+					if( $role === "formateur"){
+						$this->show('formateur/index',['infos' => $infos]);
+					} 
+
+					if( $role === "etudiant"){
+						$this->show('etudiant/index',['infos' => $infos]);
+					} 
+				}else{
+					$this->showNotFound();
+				}
+			}else{
+				$this->show('connexion/passwordForm',['error' => $error]);
+			}
+
+
+
+		}
+	}
+
+	public function passwordForm(){
+		$this->show('connexion/passwordForm');
+	}
+
 }

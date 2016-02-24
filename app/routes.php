@@ -10,6 +10,8 @@
 		['GET', '/etudiant', 'etudiant#index', 'etudiant'],
 		['GET', '/formateur', 'formateur#index', 'formateur'],
 		['GET', '/deconnexion', 'Connexion#deconnexion', 'deconnexion'],
+		['POST', '/resetPassword', 'Connexion#resetPassword', 'resetPassword'],
+		['GET', '/passwordForm', 'Connexion#passwordForm', 'passwordForm'],
 		
 
 	);
