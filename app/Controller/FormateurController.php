@@ -19,7 +19,8 @@ class FormateurController extends Controller
 	public function addLesson(){
 		//On autorise uniquement le formateur à ajouter un cour 
 		$this->allowTo('formateur');
-		if(isset($_POST[''])){
+		if(isset($_POST['addLesson'])){
+			//Récupération des données du formulaire
 			
 		}
 
