@@ -5,6 +5,7 @@
         <?php if (isset($infos)) : ?>
             <p class="bg-success" ><?php echo $infos; ?></p>
     	<?php endif; ?>
-    </div>       
+    </div>    
+       
 <?php $this->stop('main_content') ?>
 

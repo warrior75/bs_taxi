@@ -30,14 +30,6 @@
                                     <input type="email" class="form-control" placeholder="Email *" name="email" id="email" required data-validation-required-message="Veuillez saisir votre adresse email">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-group">
-                                    <select class="form-control" name="session_id">
-                                        <option value="1">Janvier</option>
-                                        <option value="2">Avril</option>
-                                        <option value="3">Juin</option>
-                                        <option value="4">Septembre</option>
-                                    </select>
-                                </div>
 
                                 <div class="form-group">
                                     <select class="form-control" name="role">

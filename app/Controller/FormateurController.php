@@ -16,4 +16,20 @@ class FormateurController extends Controller
 		$this->show('formateur/index');
 	}
 
+	public function addLesson(){
+		//On autorise uniquement le formateur à ajouter un cour 
+		$this->allowTo('formateur');
+		if(isset($_POST[''])){
+			
+		}
+
+
+	}
+
+	public function lessonForm(){
+		//On autorise uniquement le formateur à accéder à la page d'ajout de cour 
+		$this->allowTo('formateur');
+		$this->show('formateur/lessonForm');
+	}
+
 }
