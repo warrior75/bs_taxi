@@ -37,6 +37,7 @@ class AdminController extends Controller
 			$firstname = trim(htmlentities($_POST['firstname']));
 			$lastname = trim(htmlentities($_POST['lastname']));
 			$email = trim(htmlentities($_POST['email']));
+			$$session_id = trim(htmlentities($_POST['session_id']));
 			$password = $this->random_password();
 			$password_hash = password_hash($password,PASSWORD_DEFAULT); 
 			$role = trim(htmlentities($_POST['role']));
@@ -72,7 +73,8 @@ class AdminController extends Controller
 					'password' => $password_hash,
 					'role' => $role,
 					'created_at' => $date->format('Y-m-s H:i:s'),
-					'updated_at' => $date->format('Y-m-s H:i:s')
+					'updated_at' => $date->format('Y-m-s H:i:s'),
+					'session_id' => $session_id
 				]);
 			$infos = " Inscription réussie <br> Identifiant: $email <br> Mot de passe : $password ";
 
@@ -88,30 +90,5 @@ class AdminController extends Controller
 	}
 
 	// gestion des des cours et session
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
