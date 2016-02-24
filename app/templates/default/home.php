@@ -1,6 +1,8 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
+
+   
 	<section id="metier">
         <div class="container">
             <div class="row">

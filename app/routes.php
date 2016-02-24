@@ -9,6 +9,7 @@
 		['GET', '/admin/inscription', 'Admin#inscription', 'inscription'],
 		['GET', '/etudiant', 'etudiant#index', 'etudiant'],
 		['GET', '/formateur', 'formateur#index', 'formateur'],
+		['GET', '/deconnexion', 'Connexion#deconnexion', 'deconnexion'],
 		
 
 	);

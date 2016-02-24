@@ -37,7 +37,9 @@
 
 </head>
 <body id="page-top" class="index">
-    
+     <?php if (isset($info)) : ?>
+        <p class="bg-success" ><?php echo $info; ?></p>
+    <?php endif; ?>
 
     <!-- Navigation -->
     <nav class="navbar-connexion">
@@ -69,10 +71,10 @@
                         <a class="page-scroll" href="<?= $this->url('home'); ?>">Financement</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?= $this->url('home'); ?>">Contact</a>
+                        <a class="page-scroll" href="<?= $this->url('connexion'); ?>">Connexion</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?= $this->url('connexion'); ?>">Se Connecter</a>
+                        <a class="page-scroll" href="<?= $this->url('deconnexion'); ?>">Déconnexion</a>
                     </li>
                 </ul>
             </div>

@@ -76,4 +76,12 @@ protected $dbh;
 		$this->show('connexion/pageConnexion');
 	}
 
+	public function deconnexion(){
+		$authentificationManager = new AuthentificationManager();
+		$authentificationManager->logUserOut();
+		// $this->show('default/home',['info' => 'Vous avez été déconnecté du service']);
+		$_SESSION['message'] = 'Vous avez été déconnecté du service';
+		$this->redirectToRoute('home');
+	}
+
 }

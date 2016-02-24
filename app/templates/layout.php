@@ -37,7 +37,10 @@
 
 </head>
 <body id="page-top" class="index">
-	
+    <?php if (isset($_SESSION['message'])) : ?>
+        <p class="bg-success" ><?php echo $_SESSION['message']; ?></p>
+        <?php unset($_SESSION['message']); ?>
+    <?php endif; ?>
 
 	<!-- Navigation -->
 	<nav class="navbar navbar-default navbar-fixed-top">
