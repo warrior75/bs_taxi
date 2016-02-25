@@ -40,6 +40,12 @@
 
 <body>
 
+    <?php if (isset($_SESSION['message'])) : ?>
+        <p class="bg-success" ><?php echo $_SESSION['message']; ?></p>
+        <?php unset($_SESSION['message']); ?>
+    <?php endif; ?>
+
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -343,6 +349,10 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+
+        <section>
+            <?= $this->section('main_content') ?>
+        </section>
 
         <div id="page-wrapper">
             <div class="row">
