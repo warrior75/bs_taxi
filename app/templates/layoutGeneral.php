@@ -286,7 +286,7 @@
                                     <ul class="nav nav-second-level">
                                     <?php foreach ($cours as $cour) :?>
                                             <li> 
-                                                <a href="panels-wells.html"> <?php  echo $cour['title']; ?> </a>
+                                                <a href="<?= $this->url('etudiantCours',['id'=>$cour['id']]);?>"> <?php  echo $cour['title']; ?> </a>
                                             </li>
                                         <?php endforeach; ?>
 

@@ -1,6 +1,7 @@
-<?php $this->layout('layoutAdmin', [
+<?php $this->layout('layoutGeneral', [
 		'title' => 'admin',
-		'organisedThemes' => $organisedThemes
+		'organisedThemes' => $organisedThemes,
+		''
 		]) ?>
 
 <?php $this->start('main_content') ?>

@@ -73,6 +73,16 @@ class FormateurController extends Controller
 		$this->allowTo('formateur');
 		$this->show('formateur/lessonForm');
 	}
+
+		public function cours($id) {
+
+		$courManager = New CourManager();
+		$courManager->find($id);
+
+		
+
+	}
+
 	private function getOrganisedThemes() {
 		$courManager = New CourManager();
 		$coursAndThemes =  $courManager->findThemeAndCours();

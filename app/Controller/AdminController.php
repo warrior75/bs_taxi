@@ -87,6 +87,37 @@ class AdminController extends Controller
 		$this->show('admin/inscription');
 	}
 
-	// gestion des des cours et session
+	// gestion des des cours et themes
+		public function cours($id) {
+
+		$courManager = New CourManager();
+		$courManager->find($id);	
+
+	}
+
+	private function getOrganisedThemes() {
+		$courManager = New CourManager();
+		$coursAndThemes =  $courManager->findThemeAndCours();
+
+		$organisedThemes = [];
+
+		foreach ($coursAndThemes as $key => $val) {
+
+			$themeName = ucfirst($val['theme_name']);
+
+			// Si la clé existe pas dans le tab $organisedThemes, je la crée
+			if(!array_key_exists($themeName, $organisedThemes)) {
+				$organisedThemes[$themeName] =  [];
+			}
+
+			// Ensuite j'insere les donnée du cours
+			$organisedThemes[$themeName][] = [
+				'title' => $val['title'],
+				'text_body' => $val['text_body']
+			];
+		}
+
+		return $organisedThemes;
+	}
 
 }
