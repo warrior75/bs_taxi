@@ -303,11 +303,6 @@
                 </div>
                 <!-- /.navbar-static-side -->
             </nav>
-
-            <section>
-                <?= $this->section('main_content') ?>
-            </section>
-
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
