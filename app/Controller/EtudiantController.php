@@ -3,12 +3,12 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Manager\CourManager;
 
 class EtudiantController extends Controller
 {
 
-	// connexion à la BDD
-	protected $dbh;
+	
 
 	/**
 	 * Page d'accueil par défaut
@@ -16,13 +16,18 @@ class EtudiantController extends Controller
 	public function index()
 	{
 		$this->allowTo('etudiant');
-		$this->show('etudiant/index');
+		
 
 		// récupérer les données de la session utilisateur
 		$loggedUser = $this->getUser();
 
-		// debug 
-		debug($connectedAdmin);
+		
+		
+		$coursManager = New CourManager();
+		$cours=$coursManager->findAll($orderBy="id", $orderDir ="ASC", $limit = null, $offset = null );
+		debug($cours);
+
+		$this->show('etudiant/index',['cours'=>$cours]);
 
 	
 	}

@@ -54,6 +54,9 @@
                 <a class="navbar-brand" href="index.html">Gestion BS TAXI</a>
             </div>
             <!-- /.navbar-header -->
+                    <section>
+            <?= $this->section('main_content') ?>
+        </section>
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
