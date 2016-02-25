@@ -279,14 +279,13 @@
                             <li>
                                 <a href="#"><i class="fa fa-dashboard fa-fw"></i>Cours</a>
                             </li>
-                            <?php foreach ($themes  as $theme): ?>
+                            <?php foreach ($organisedThemes  as $themeKey => $cours): ?>
                                 <li>
 
-                                    <a href="#"><i class="fa fa-wrench fa-fw"></i> <?php echo $theme['name'];?>  <span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-wrench fa-fw"></i> <?php echo $themeKey;?>  <span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
-                                    <?php foreach ($theme as $cour) :?>
-                                            <li>
-
+                                    <?php foreach ($cours as $cour) :?>
+                                            <li> 
                                                 <a href="panels-wells.html"> <?php  echo $cour['title']; ?> </a>
                                             </li>
                                         <?php endforeach; ?>
