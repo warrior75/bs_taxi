@@ -25,7 +25,7 @@ class FormateurController extends Controller
 		if(isset($_POST['addLesson'])){
 			//Récupération des données du formulaire
 			$titre = trim(htmlentities($_POST['titre']));
-			$theme_id = trim(htmlentities($_POST['theme_id']));
+			$themes_id = trim(htmlentities($_POST['themes_id']));
 			$text_body = trim(htmlentities($_POST['text_body']));
 
 			// Initialisation d'un tableau d'erreurs 
@@ -43,7 +43,7 @@ class FormateurController extends Controller
 				
 				$cours = $coursManager->insert([
 					'title' => $titre,
-					'theme_id' => $theme_id,
+					'themes_id' => $themes_id,
 					'text_body' => $text_body,
 					'created_at' => $date->format('Y-m-s H:i:s')
 				]); 

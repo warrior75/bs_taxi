@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                    <select class="form-control" name="theme_id">
+                    <select class="form-control" name="themes_id">
                         <option value="1" selected>Sécurité</option>
                         <option value="2">Gestion</option>
                         <option value="3">Conduite</option>
