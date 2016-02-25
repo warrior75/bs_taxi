@@ -18,6 +18,7 @@
 		['GET', '/etudiant/[:id]', 'Etudiant#cours', 'etudiantCours'],
 		['GET', '/formateur/[:id]', 'Formateur#cours', 'formateurCours'],
 		['GET', '/admin/[:id]', 'Admin#cours', 'adminCours'],
+		['POST', '/session', 'Etudiant#session', 'session'],
 		
 
 	);

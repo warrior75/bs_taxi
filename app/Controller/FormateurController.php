@@ -48,9 +48,6 @@ class FormateurController extends Controller
 					'created_at' => $date->format('Y-m-s H:i:s')
 				]); 
 
-				debug($cours);
-				die();
-
 				if($cours){
 					$_SESSION['message'] = "Cours ajouté avec succès";
 

@@ -25,11 +25,26 @@ class EtudiantController extends Controller
 	}
 
 	public function cours($id) {
-
+		$loggedUser = $this->getUser();
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
-
+		
+		//créer une session si elle n'existe pas
+		$sessionManager = New SessionManager();
+		
+		if (!$sessionManager->findByUserId($loggedUser['id'])) {
+			// sinon on crée la session
+				$sessionManager->insert([
+						'cours_id'=>$id,
+						'status' => 'in_progress',
+						'users_id' => $loggedUser['id']
+					]);
+		}
 		$this->show('etudiant/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+
+
+		
+
 	}
 
 	private function getOrganisedThemes() {
@@ -57,6 +72,11 @@ class EtudiantController extends Controller
 
 		return $organisedThemes;
 	}
+
+
+
+
+
 
 }
 

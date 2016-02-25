@@ -16,5 +16,7 @@
 					<p> <?= $cour['text_body'] ?> </p>
 			</div>       
 		<?php endif; ?>
+
+		
 <?php $this->stop('main_content') ?>
 
