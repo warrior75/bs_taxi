@@ -4,6 +4,8 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\CourManager;
+use \Manager\ThemeManager;
+
 
 class EtudiantController extends Controller
 {
@@ -23,11 +25,15 @@ class EtudiantController extends Controller
 
 		
 		
-		$coursManager = New CourManager();
-		$cours=$coursManager->findAll($orderBy="id", $orderDir ="ASC", $limit = null, $offset = null );
+		// $coursManager = New CourManager();
+		// $cours=$coursManager->findAll($orderBy="id", $orderDir ="ASC", $limit = null, $offset = null );
+		$courManager = New CourManager();
+		$coursAndThemes =  $courManager->findThemeAndCour();
+
 		
 
-		$this->show('etudiant/index',['cours'=>$cours]);
+
+		$this->show('etudiant/index',['themes'=>$coursAndThemes]);
 
 	
 	}
