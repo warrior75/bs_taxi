@@ -25,7 +25,7 @@ class EtudiantController extends Controller
 		
 		$coursManager = New CourManager();
 		$cours=$coursManager->findAll($orderBy="id", $orderDir ="ASC", $limit = null, $offset = null );
-		debug($cours);
+		
 
 		$this->show('etudiant/index',['cours'=>$cours]);
 
