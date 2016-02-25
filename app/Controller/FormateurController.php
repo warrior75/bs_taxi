@@ -15,7 +15,8 @@ class FormateurController extends Controller
 	public function index()
 	{
 		$this->allowTo('formateur');
-		$this->show('formateur/index');
+		$this->show('formateur/index',['organisedThemes' => $this->getOrganisedThemes()]);
+
 	}
 
 	public function addLesson(){
@@ -71,6 +72,30 @@ class FormateurController extends Controller
 		//On autorise uniquement le formateur à accéder à la page d'ajout de cour 
 		$this->allowTo('formateur');
 		$this->show('formateur/lessonForm');
+	}
+	private function getOrganisedThemes() {
+		$courManager = New CourManager();
+		$coursAndThemes =  $courManager->findThemeAndCours();
+
+		$organisedThemes = [];
+
+		foreach ($coursAndThemes as $key => $val) {
+
+			$themeName = ucfirst($val['theme_name']);
+
+			// Si la clé existe pas dans le tab $organisedThemes, je la crée
+			if(!array_key_exists($themeName, $organisedThemes)) {
+				$organisedThemes[$themeName] =  [];
+			}
+
+			// Ensuite j'insere les donnée du cours
+			$organisedThemes[$themeName][] = [
+				'title' => $val['title'],
+				'text_body' => $val['text_body']
+			];
+		}
+
+		return $organisedThemes;
 	}
 
 }

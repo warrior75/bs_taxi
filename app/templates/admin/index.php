@@ -1,4 +1,7 @@
-<?php $this->layout('layoutAdmin', ['title' => 'admin']) ?>
+<?php $this->layout('layoutAdmin', [
+		'title' => 'admin',
+		'organisedThemes' => $organisedThemes
+		]) ?>
 
 <?php $this->start('main_content') ?>
 	<div class="col-md-4 col-md-offset-4">

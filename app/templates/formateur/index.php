@@ -1,4 +1,7 @@
-<?php $this->layout('layoutGeneral', ['title' => 'formateur']) ?>
+<?php $this->layout('layoutGeneral', [
+		'title' => 'formateur',
+		'organisedThemes' => $organisedThemes
+		]) ?>
 
 <?php $this->start('main_content') ?>
 	 
