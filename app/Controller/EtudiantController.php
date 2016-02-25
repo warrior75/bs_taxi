@@ -33,7 +33,7 @@ class EtudiantController extends Controller
 		//créer une session si elle n'existe pas
 		$sessionManager = New SessionManager();
 		
-		if (!$sessionManager->findByUserId($loggedUser['id'])) {
+		if (!$sessionManager->findByUserIdAndCourID($loggedUser['id'],$id)) {
 			// sinon on crée la session
 				$sessionManager->insert([
 						'cours_id'=>$id,
