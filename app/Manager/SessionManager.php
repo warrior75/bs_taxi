@@ -1,7 +1,7 @@
 <?php 
 namespace Manager;
 
-class ThemeManager extends \W\Manager\Manager
+class SessionManager extends \W\Manager\Manager
 {
 	public function findByUserId($id){
 		if (!is_numeric($id)){
