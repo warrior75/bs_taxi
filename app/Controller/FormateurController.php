@@ -3,6 +3,8 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Manager\CourManager;
+use \DateTime;
 
 class FormateurController extends Controller
 {
@@ -19,8 +21,44 @@ class FormateurController extends Controller
 	public function addLesson(){
 		//On autorise uniquement le formateur à ajouter un cour 
 		$this->allowTo('formateur');
-		if(isset($_POST[''])){
-			
+		if(isset($_POST['addLesson'])){
+			//Récupération des données du formulaire
+			$titre = trim(htmlentities($_POST['titre']));
+			$theme_id = trim(htmlentities($_POST['theme_id']));
+			$text_body = trim(htmlentities($_POST['text_body']));
+
+			// Initialisation d'un tableau d'erreurs 
+			$errors = [];
+
+			if(empty($titre) || empty($theme_id) || empty($text_body)){
+				$errors['vide'] = "Un des champs n'est pas renseigné";
+				
+			}
+
+			if(empty($errors)){
+				$date = new DateTime();
+				$coursManager = new CourManager();
+				
+				
+				$cours = $coursManager->insert([
+					'titre' => $titre,
+					'theme_id' => $theme_id,
+					'text_body' => $text_body,
+					'created_at' => $date->format('Y-m-s H:i:s')
+				]); 
+
+				if($cours){
+					$_SESSION['message'] = "Cours ajouté avec succès";
+
+				}else{
+					$_SESSION['message'] = "Erreurs cours";
+				}
+
+				$this->redirectToRoute('formateur');
+
+			}else{
+				$this->show('formateur/index',['errors' => $errors]);
+			}
 		}
 
 

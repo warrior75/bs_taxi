@@ -1,7 +1,10 @@
-<?php /* app/Manager/CommentManager.php */
+<?php 
 namespace Manager;
 
-class CourManager extends \W\Manager\Manager 
+class CourManager extends \W\Manager\Manager
 {
 	
+
 }
+
+?>
