@@ -279,14 +279,14 @@
                             <li>
                                 <a href="#"><i class="fa fa-dashboard fa-fw"></i>Cours</a>
                             </li>
-                            <?php foreach ($organisedThemes  as $themeKey => $cours): ?>
+                            <?php foreach ($organisedThemes  as $themeKey => $key): ?>
                                 <li>
 
                                     <a href="#"><i class="fa fa-wrench fa-fw"></i> <?php echo $themeKey;?>  <span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
-                                    <?php foreach ($cours as $cour) :?>
+                                    <?php foreach ($key as $value) :?>
                                             <li> 
-                                                <a href="<?= $this->url('etudiantCours',['id'=>$cour['id']]);?>"> <?php  echo $cour['title']; ?> </a>
+                                                <a href="<?= $this->url('formateurCours',[ 'id' => $value['id'] ]);?>"> <?php  echo $value['title']; ?> </a>
                                             </li>
                                         <?php endforeach; ?>
 
@@ -303,11 +303,6 @@
                 </div>
                 <!-- /.navbar-static-side -->
             </nav>
-
-            <section>
-                <?= $this->section('main_content') ?>
-            </section>
-
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">

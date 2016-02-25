@@ -27,9 +27,9 @@ class EtudiantController extends Controller
 	public function cours($id) {
 
 		$courManager = New CourManager();
-		$courManager->find($id);
+		$cour = $courManager->find($id);
 
-		
+		$this->show('etudiant/index',['cour' => $cour]);
 
 	}
 
@@ -51,7 +51,8 @@ class EtudiantController extends Controller
 			// Ensuite j'insere les donnée du cours
 			$organisedThemes[$themeName][] = [
 				'title' => $val['title'],
-				'text_body' => $val['text_body']
+				'text_body' => $val['text_body'],
+				'id' => $val['id']
 			];
 		}
 

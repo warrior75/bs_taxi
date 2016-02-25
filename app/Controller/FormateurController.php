@@ -77,9 +77,10 @@ class FormateurController extends Controller
 		public function cours($id) {
 
 		$courManager = New CourManager();
-		$courManager->find($id);
+		$cour = $courManager->find($id);
 
-		
+		$this->show('formateur/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+
 
 	}
 
@@ -101,7 +102,8 @@ class FormateurController extends Controller
 			// Ensuite j'insere les donnée du cours
 			$organisedThemes[$themeName][] = [
 				'title' => $val['title'],
-				'text_body' => $val['text_body']
+				'text_body' => $val['text_body'],
+				'id' => $val['id']
 			];
 		}
 

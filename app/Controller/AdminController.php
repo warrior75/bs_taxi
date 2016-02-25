@@ -91,7 +91,9 @@ class AdminController extends Controller
 		public function cours($id) {
 
 		$courManager = New CourManager();
-		$courManager->find($id);	
+		$cour = $courManager->find($id);	
+		$this->show('admin/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+
 
 	}
 
@@ -114,6 +116,7 @@ class AdminController extends Controller
 			$organisedThemes[$themeName][] = [
 				'title' => $val['title'],
 				'text_body' => $val['text_body']
+				'id' => $val['id'],
 			];
 		}
 
