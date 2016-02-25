@@ -38,14 +38,17 @@ class FormateurController extends Controller
 			if(empty($errors)){
 				$date = new DateTime();
 				$coursManager = new CourManager();
-				
+
 				
 				$cours = $coursManager->insert([
-					'titre' => $titre,
+					'title' => $titre,
 					'theme_id' => $theme_id,
 					'text_body' => $text_body,
 					'created_at' => $date->format('Y-m-s H:i:s')
 				]); 
+
+				debug($cours);
+				die();
 
 				if($cours){
 					$_SESSION['message'] = "Cours ajouté avec succès";
