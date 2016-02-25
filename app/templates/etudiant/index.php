@@ -15,6 +15,7 @@
 			<div>
 					<h2><?= $cour['title']; ?></h2>
 					<p> <?= $cour['text_body'] ?> </p>
+					<button class="btn btn-primary" >Valider le cours</button>
 			</div>       
 		<?php endif; ?>
 <?php $this->stop('main_content') ?>
