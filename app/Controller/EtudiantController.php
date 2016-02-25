@@ -29,8 +29,7 @@ class EtudiantController extends Controller
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
 
-		$this->show('etudiant/index',['cour' => $cour]);
-
+		$this->show('etudiant/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
 	}
 
 	private function getOrganisedThemes() {
