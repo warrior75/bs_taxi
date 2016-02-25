@@ -13,10 +13,8 @@
 
 		<?php if (isset($cour)) :?>
 			<div>
-				<?php foreach ($cour as $value) :?>
-					<h2><?= $value['title']; ?></h2>
-					<p> <?= $value['text_body'] ?> </p>
-				<?php endforeach; ?>
+					<h2><?= $cour['title']; ?></h2>
+					<p> <?= $cour['text_body'] ?> </p>
 			</div>       
 		<?php endif; ?>
 <?php $this->stop('main_content') ?>
