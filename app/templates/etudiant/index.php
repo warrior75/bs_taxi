@@ -2,6 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	 <div class="col-md-4 col-md-offset-4">
+	         <?php print_r($cours); ?>
         <?php if (isset($infos)) : ?>
             <p class="bg-success" ><?php echo $infos; ?></p>
     	<?php endif; ?>
