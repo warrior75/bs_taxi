@@ -115,8 +115,8 @@ class AdminController extends Controller
 			// Ensuite j'insere les donnée du cours
 			$organisedThemes[$themeName][] = [
 				'title' => $val['title'],
-				'text_body' => $val['text_body']
-				'id' => $val['id'],
+				'text_body' => $val['text_body'],
+				'id' => $val['id']
 			];
 		}
 
