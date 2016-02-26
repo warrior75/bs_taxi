@@ -1,7 +1,9 @@
 <?php $this->layout('layoutAdmin', [
 		'title' => 'admin',
 		'organisedThemes' => $organisedThemes,
-		''
+		'etudiant' => $etudiant,
+		'formateur'=>$formateur
+		
 		]) ?>
 
 <?php $this->start('main_content') ?>

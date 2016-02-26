@@ -11,6 +11,13 @@ class UserManager extends \W\Manager\Manager
 		return $sth->fetchAll();
 	}
 
+	public function findFormateur(){
+		$sql= "SELECT * FROM users WHERE role = 'formateur'";
+		$sth=$this->dbh->prepare($sql);
+		$sth->execute();
+		return $sth->fetchAll();
+	}
+
 }
 
 ?>

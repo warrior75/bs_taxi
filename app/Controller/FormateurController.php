@@ -20,7 +20,8 @@ class FormateurController extends Controller
 		$etudiant = $userManager->findEleve();
 		$this->show('formateur/index',[
 			'organisedThemes' => $this->getOrganisedThemes(),
-			'etudiant' => $etudiant
+			'etudiant' => $etudiant,
+
 			]);
 
 	}
