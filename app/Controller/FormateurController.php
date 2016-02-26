@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\CourManager;
+use \Manager\UserManager;
 use \DateTime;
 
 class FormateurController extends Controller
@@ -15,7 +16,12 @@ class FormateurController extends Controller
 	public function index()
 	{
 		$this->allowTo('formateur');
-		$this->show('formateur/index',['organisedThemes' => $this->getOrganisedThemes()]);
+		$userManager = New UserManager();
+		$etudiant = $userManager->findEleve();
+		$this->show('formateur/index',[
+			'organisedThemes' => $this->getOrganisedThemes(),
+			'etudiant' => $etudiant
+			]);
 
 	}
 
@@ -65,13 +71,10 @@ class FormateurController extends Controller
 
 	}
 
-	public function lessonForm($id = 0){
+	public function lessonForm(){
 		//On autorise uniquement le formateur à accéder à la page d'ajout de cour 
 		$this->allowTo('formateur');
-		$courManager = New CourManager();
-		$cour = $courManager->find($id);
-
-		$this->show('formateur/lessonForm',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+		$this->show('formateur/lessonForm');
 	}
 
 		public function cours($id) {

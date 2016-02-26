@@ -1,6 +1,7 @@
 <?php $this->layout('layoutEtudiant', [
 		'title' => 'etudiant',
 		'organisedThemes' => $organisedThemes
+		
 		]) ?>
 
 <?php $this->start('main_content') ?>
