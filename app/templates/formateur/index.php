@@ -11,9 +11,9 @@
     	<?php endif; ?>
 
 		<?php if (isset($cour)) :?>
-			<div>
-					<h2><?= $cour['title']; ?></h2>
-					<p> <?= $cour['text_body'] ?> </p>
+			<div class="cour">
+					<h2 class="cour_title"><?= $cour['title']; ?></h2>
+					<p class="cour_body"> <?= $cour['text_body'] ?> </p>
 			</div>       
 		<?php endif; ?>
 

@@ -29,6 +29,8 @@
     <!-- Custom Fonts -->
     <link href="<?= $this->assetUrl('bower_components/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
 
+    <link href="<?= $this->assetUrl('css/style.css') ?>" rel="stylesheet" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -263,7 +265,7 @@
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="<?= $this->url('deconnexion'); ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="<?= $this->url('deconnexion'); ?>"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -277,7 +279,7 @@
                         <ul class="nav" id="side-menu">
 
                             <li>
-                                <a href="#"><i class="fa fa-dashboard fa-fw"></i>Cours</a>
+                                <a href="#"><i class="fa fa-dashboard fa-fw"></i>Courss</a>
                             </li>
                             <?php foreach ($organisedThemes  as $themeKey => $key): ?>
                                 <li>
@@ -306,7 +308,7 @@
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Dashboard</h1>
+                        <h1 class="page-header">Bonjour <?= $_SESSION['user']['firstname'] ;?></h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
