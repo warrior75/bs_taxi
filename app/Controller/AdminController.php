@@ -16,7 +16,7 @@ class AdminController extends Controller
 	/**
 	 * Page accessible uniquement pour les admin
 	 */
-	public function index()
+	public function index($id = 0)
 	{
 		$this->allowTo('admin');
 		$courManager = New CourManager();
