@@ -68,7 +68,10 @@ class FormateurController extends Controller
 	public function lessonForm(){
 		//On autorise uniquement le formateur à accéder à la page d'ajout de cour 
 		$this->allowTo('formateur');
-		$this->show('formateur/lessonForm');
+		$courManager = New CourManager();
+		$cour = $courManager->find($id);
+
+		$this->show('formateur/lessonForm',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
 	}
 
 		public function cours($id) {
