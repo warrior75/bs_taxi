@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Manager\CourManager;
 use \W\Manager\UserManager;
 use \W\Security\AuthentificationManager;
 use \DateTime;
