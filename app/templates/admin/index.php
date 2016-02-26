@@ -12,7 +12,7 @@
     	<?php endif; ?>
 
 
-		<?php if (isset($cour)) :?>
+		<?php if (isset($cour) && $cour['id'] != 0) :?>
 			<div>
 					<h2><?= $cour['title']; ?></h2>
 					<p> <?= $cour['text_body'] ?> </p>
