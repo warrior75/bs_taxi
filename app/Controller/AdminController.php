@@ -18,7 +18,10 @@ class AdminController extends Controller
 	public function index()
 	{
 		$this->allowTo('admin');
-		$this->show('admin/index');
+		$courManager = New CourManager();
+		$cour = $courManager->find($id);
+
+		$this->show('admin/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
 	}
 
 	// fonction privée qui génére un mdp aléatoire
