@@ -1,5 +1,7 @@
-<?php $this->layout('layoutGeneral', ['title' => 'Formateur']) ?>
-
+<?php $this->layout('layoutFormateur', 
+    ['title' => 'Formateur',
+    'organisedThemes' => $organisedThemes
+    ]) ?>
 <?php $this->start('main_content') ?>
 <!-- Ajout cours -->
 <section id="add-user">

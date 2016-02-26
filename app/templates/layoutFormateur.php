@@ -437,17 +437,21 @@
                                         </li>
                                     </ul>
                                 </div>
+
                                 <!-- /.panel-body -->
                                 <div class="panel-footer">
                                     <div class="input-group">
-                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-warning btn-sm" id="btn-chat">
-                                                Send
-                                            </button>
-                                        </span>
+                                        <form action="<?= $this->url('chat'); ?>" method="POST">
+                                            <input id="btn-input" name="text_body" type="text" class="form-control input-sm" placeholder="Votre message . . ." />
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-warning btn-sm" id="btn-chat" name="sendMessage">
+                                                    Envoyer
+                                                </button>
+                                            </span>
+                                        </form>
                                     </div>
                                 </div>
+
                                 <!-- /.panel-footer -->
                             </div>
                             <!-- /.panel .chat-panel -->
