@@ -3,6 +3,13 @@
     'organisedThemes' => $organisedThemes
     ]) ?>
 <?php $this->start('main_content') ?>
+    <?php if (isset($cour)) :?>
+            <div class="cour">
+                    <h2 class="cour_title"><?= $cour['title']; ?></h2>
+                    <p class="cour_body"> <?= $cour['text_body'] ?> </p>
+            </div>       
+        <?php endif; ?>
+
 <!-- Ajout cours -->
 <section id="add-user">
     <div class="row">
