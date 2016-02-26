@@ -3,25 +3,26 @@
     'organisedThemes' => $organisedThemes
     ]) ?>
 <?php $this->start('main_content') ?>
-    <?php if (isset($cour)) :?>
+    <?php if(isset($cour) && $cour['id'] != 0) :?>
             <div class="cour">
                     <h2 class="cour_title"><?= $cour['title']; ?></h2>
                     <p class="cour_body"> <?= $cour['text_body'] ?> </p>
-            </div>       
+            </div> 
+              
         <?php endif; ?>
 
 <!-- Ajout cours -->
 <section id="add-user">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Ajout Cours</h2>
+            <h2 class="section-heading">Ajouter un cours</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
 
             <div class="row">
-             <div class="col-md-4 col-md-offset-4">
+             <div class="col-md-10 col-md-offset-1">
                 <?php if (isset($errors['vide'])) : ?>
                 <p class="bg-danger" ><?php echo $errors['vide']; ?></p>
             <?php endif; ?>
@@ -43,7 +44,7 @@
                 </div>
 
                 <div class="form-group">
-                    <textarea class="form-control"  name="text_body" id="text_body">
+                    <textarea class="form-control"  name="text_body" id="text_body" rows=15>
 
                     </textarea>
                 </div>
