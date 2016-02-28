@@ -109,8 +109,21 @@ class AdminController extends Controller
 			}
 		}	
 	// Affiche la page du formulaire d'inscription
-	public function inscription(){
-		$this->show('admin/inscription');
+	public function inscription($id){
+
+		$courManager = New CourManager();
+		$cour = $courManager->find($id);
+
+		$userManager = New UtilisateurManager();
+		$etudiant = $userManager->findEleve();
+
+		$userFormateur = New UtilisateurManager();
+		$formateur = $userFormateur->findFormateur();
+
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
+		$this->show('admin/inscription',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages , 'etudiant' => $etudiant ,'formateur'=> $formateur]);
+
 	}
 
 	// gestion des des cours et themes
@@ -119,10 +132,10 @@ class AdminController extends Controller
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
 
-		$userManager = New UserManager();
+		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
 
-		$userFormateur = New UserManager();
+		$userFormateur = New UtilisateurManager();
 		$formateur = $userFormateur->findFormateur();
 
 		$messagesManager = new MessageManager();

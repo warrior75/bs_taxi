@@ -89,7 +89,7 @@ class FormateurController extends Controller
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
 
-		$userManager = New UserManager();
+		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
 
 		$messagesManager = new MessageManager();

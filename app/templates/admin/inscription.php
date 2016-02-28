@@ -1,4 +1,10 @@
-<?php $this->layout('layoutAdmin', ['title' => 'admin']) ?>
+<?php $this->layout('layoutAdmin', [
+        'title' => 'admin',
+        'organisedThemes' => $organisedThemes,
+        'etudiant' => $etudiant,
+        'formateur'=>$formateur,
+        'messages' => $messages,
+        ]) ?>
 
 <?php $this->start('main_content') ?>
 	        <!-- Ajout user -->
