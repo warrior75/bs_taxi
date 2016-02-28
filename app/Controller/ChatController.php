@@ -43,21 +43,11 @@ class ChatController extends Controller
 						'created_at' => $date->format('Y-m-d H:i'),
 
 					]);
-				$this->show('formateur/index',['errors' => $errors]);
+				$this->redirectToRoute('formateur/index',['errors' => $errors]);
 				}
 				
 			}
 
-		
+		}
 	}
 
-	// Methode qui permet de récupérer les 10 derniers messages et les afficher
-	public function getMessages(){
-
-		$messagesManager = new MessageManager();
-		$messages = $messagesManager->showMessage();
-
-		$this->show('formateur/index',['messages' => $messages]);
-	}
-
-}

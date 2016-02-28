@@ -20,7 +20,7 @@
 		['GET', '/admin/[:id]', 'Admin#cours', 'adminCours'],
 		['POST', '/session', 'Etudiant#session', 'session'],
 		['POST', '/chat', 'Chat#addMessage', 'chat'],
-		['GET', '/getMessages', 'Chat#getMessages', 'getMessages'],
+
 		
 
 	);

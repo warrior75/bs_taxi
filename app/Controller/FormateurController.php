@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \Manager\CourManager;
 use \Manager\UserManager;
+use \Manager\MessageManager;
 use \DateTime;
 
 class FormateurController extends Controller
@@ -18,10 +19,12 @@ class FormateurController extends Controller
 		$this->allowTo('formateur');
 		$userManager = New UserManager();
 		$etudiant = $userManager->findEleve();
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
 		$this->show('formateur/index',[
 			'organisedThemes' => $this->getOrganisedThemes(),
 			'etudiant' => $etudiant,
-
+			'messages' => $messages,
 			]);
 
 	}

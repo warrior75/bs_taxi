@@ -5,9 +5,9 @@
 		'messages' => $messages
 		]) ?>
 
+
 <?php $this->start('main_content') ?>
-		<?php debug($etudiant);	 ?>
-		<?php debug($formateur);	 ?>
+		<?php debug($messages);	 ?>
 	    <?php if (isset($infos)) : ?>
 			<div class="col-md-4 col-md-offset-4">
             	<p class="bg-success" ><?php echo $infos; ?></p>
