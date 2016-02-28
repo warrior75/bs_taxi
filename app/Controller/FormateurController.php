@@ -17,10 +17,13 @@ class FormateurController extends Controller
 	public function index()
 	{
 		$this->allowTo('formateur');
+
 		$userManager = New UserManager();
 		$etudiant = $userManager->findEleve();
+
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
+		
 		$this->show('formateur/index',[
 			'organisedThemes' => $this->getOrganisedThemes(),
 			'etudiant' => $etudiant,
@@ -116,5 +119,6 @@ class FormateurController extends Controller
 
 		return $organisedThemes;
 	}
+
 
 }
