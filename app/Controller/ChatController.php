@@ -3,7 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-use  W\Manager\Manager;
+use \W\Manager\Manager;
 use \Manager\MessageManager;
 use \DateTime;
 

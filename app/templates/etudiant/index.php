@@ -16,8 +16,9 @@
 			<div class="cour">
 					<h2 class="cour_title"><?= $cour['title']; ?></h2>
 					<p class="cour_body"> <?= $cour['text_body'] ?> </p>
-					
+
 			</div>       
+					<button class="btn btn-primary" action="session">Valider le cours</button>
 		<?php endif; ?>
 		
 <?php $this->stop('main_content') ?>

@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\CourManager;
+use \Manager\MessageManager;
 use \Manager\SessionManager;
 use \Manager\ThemeManager;
 use \Manager\MessageManager;
