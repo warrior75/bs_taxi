@@ -21,10 +21,12 @@ class AdminController extends Controller
 		$this->allowTo('admin');
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
+		
 		$userManager = New UserManager();
 		$etudiant = $userManager->findEleve();
-		$userFormateurManager = New UserManager();
-		$formateur = $userFormateurManager->findFormateur();
+		
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
 
 		$this->show('admin/index',[
 			'cour' => $cour,
