@@ -84,8 +84,8 @@ class AdminController extends Controller
 						'lastname' => $lastname,
 						'password' => $password_hash,
 						'role' => $role,
-						'created_at' => $date->format('Y-m-s H:i:s'),
-						'updated_at' => $date->format('Y-m-s H:i:s')
+						'created_at' => $date->format('Y-m-d H:i:s'),
+						'updated_at' => $date->format('Y-m-d H:i:s')
 					]);
 					$infos = " Inscription réussie <br> Identifiant: $email <br> Mot de passe : $password ";
 

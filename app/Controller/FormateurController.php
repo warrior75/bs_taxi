@@ -65,7 +65,7 @@ class FormateurController extends Controller
 				$this->redirectToRoute('formateur');
 
 			}else{
-				$this->show('formateur/index',['errors' => $errors]);
+				$this->show('formateur/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
 			}
 		}
 

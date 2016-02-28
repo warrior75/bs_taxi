@@ -2,7 +2,7 @@
 		'title' => 'formateur',
 		'organisedThemes' => $organisedThemes,
 		'etudiant' => $etudiant,
-		
+		'messages' => $messages
 		]) ?>
 
 <?php $this->start('main_content') ?>

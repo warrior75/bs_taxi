@@ -371,6 +371,7 @@
                             </ul>
                         </div>
                     </div>
+                    
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <ul class="chat">
@@ -420,6 +421,7 @@
                                             </p>
                                         </div>
                                     </li>
+
                                     <li class="right clearfix">
                                         <span class="chat-img pull-right">
                                             <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
@@ -434,7 +436,7 @@
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
                                                 </p>
                                             </div>
-                                        </li>
+                                    </li>
                                     </ul>
                                 </div>
 
