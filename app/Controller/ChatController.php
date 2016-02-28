@@ -43,7 +43,7 @@ class ChatController extends Controller
 						'created_at' => $date->format('Y-m-d H:i'),
 
 					]);
-				$this->redirectToRoute('formateur/index',['errors' => $errors]);
+				$this->redirectToRoute('formateur',['errors' => $errors]);
 				}
 				
 			}
