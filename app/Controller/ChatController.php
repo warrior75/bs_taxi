@@ -20,6 +20,7 @@ class ChatController extends Controller
 				$text_body = trim(htmlentities($_POST['text_body']));
 				$firstname = trim(htmlentities($_SESSION['user']['firstname'])); 
 				$lastname = trim(htmlentities($_SESSION['user']['lastname'])); 
+				$role = trim(htmlentities($_SESSION['user']['role'])); 
 
 				//Initialisation d'un tableau d'erreurs vide
 				$errors = [];
@@ -43,7 +44,11 @@ class ChatController extends Controller
 						'created_at' => $date->format('Y-m-d H:i'),
 
 					]);
-				$this->redirectToRoute('formateur',['errors' => $errors]);
+
+
+						$this->redirectToRoute($role,['errors' => $errors]);
+
+
 				}
 				
 			}

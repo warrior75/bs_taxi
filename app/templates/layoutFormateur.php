@@ -357,7 +357,7 @@
                                 </span>
                                 <div class="chat-body clearfix">
                                     <div class="header">
-                                        <strong class="primary-font"> <?= $message['firstname'];?> <?= $message['lastname'];?> </strong>
+                                        <strong class="primary-font"> <?= $message['firstname'];?> </strong>
                                         <small class="pull-right text-muted">
                                             <i class="fa fa-clock-o fa-fw"></i> <?= $message['created_at']; ?>
                                         </small>

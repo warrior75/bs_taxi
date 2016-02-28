@@ -7,7 +7,6 @@
 
 
 <?php $this->start('main_content') ?>
-		<?php debug($messages);	 ?>
 		<?php debug($etudiant);	 ?>
 	    <?php if (isset($infos)) : ?>
 			<div class="col-md-4 col-md-offset-4">
