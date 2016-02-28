@@ -88,8 +88,10 @@ class FormateurController extends Controller
 
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
 
-		$this->show('formateur/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+		$this->show('formateur/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages]);
 
 
 	}

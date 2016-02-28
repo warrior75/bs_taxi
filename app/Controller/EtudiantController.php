@@ -38,6 +38,8 @@ class EtudiantController extends Controller
 		$loggedUser = $this->getUser();
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
 		
 		//créer une session si elle n'existe pas
 		$sessionManager = New SessionManager();
@@ -50,7 +52,7 @@ class EtudiantController extends Controller
 						'users_id' => $loggedUser['id']
 					]);
 		}
-		$this->show('etudiant/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+		$this->show('etudiant/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages]);
 
 
 		

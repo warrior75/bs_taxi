@@ -25,15 +25,18 @@ class AdminController extends Controller
 		
 		$userManager = New UserManager();
 		$etudiant = $userManager->findEleve();
+
+		$userFormateur = New UserManager();
+		$formateur = $userFormateur->findFormateur();
 		
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
 
 		$this->show('admin/index',[
 			'cour' => $cour,
-			 'organisedThemes' => $this->getOrganisedThemes(),
-			 'etudiant' => $etudiant,
-			'formateur'=>$formateur
+			'organisedThemes' => $this->getOrganisedThemes(),
+			'etudiant' => $etudiant,
+			'formateur'=>$formateur,
 			'messages' => $messages
 			 ]);
 	}
@@ -109,7 +112,9 @@ class AdminController extends Controller
 
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);	
-		$this->show('admin/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
+		$this->show('admin/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages]);
 
 
 	}

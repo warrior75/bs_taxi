@@ -338,7 +338,7 @@
         Chat
         <div class="btn-group pull-right">
             <button type="button" class="btn btn-default btn-xs">
-               <a href="<?= $this->url('formateur')?>">
+               <a href="<?= $this->url('admin')?>">
                 <i class="fa fa-refresh fa-fw"></i> Refresh
             </a>
         </button>
