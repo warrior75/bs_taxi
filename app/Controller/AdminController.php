@@ -3,12 +3,12 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-use \Manager\CourManager;
-use \Manager\MessageManager;
-use \W\Manager\UserManager;
 use \W\Security\AuthentificationManager;
 use \DateTime;
 use \PHPMailer;
+use \Manager\CourManager;
+use \Manager\MessageManager;
+use \Manager\UserManager;
 
 
 class AdminController extends Controller
