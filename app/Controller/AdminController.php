@@ -8,7 +8,7 @@ use \DateTime;
 use \PHPMailer;
 use \Manager\CourManager;
 use \Manager\MessageManager;
-use \Manager\UserManager;
+use \Manager\UtilisateurManager;
 
 
 class AdminController extends Controller
@@ -23,10 +23,10 @@ class AdminController extends Controller
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
 		
-		$userManager = New UserManager();
+		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
 
-		$userFormateur = New UserManager();
+		$userFormateur = New UtilisateurManager();
 		$formateur = $userFormateur->findFormateur();
 		
 		$messagesManager = new MessageManager();
@@ -65,7 +65,7 @@ class AdminController extends Controller
 				$errors = [];
 
 				// Instanciation d'un objet de type UseManager
-				$userManager = new userManager();
+				$userManager = new UtilisateurManager();
 				$userManager->setTable('users');
 
 				if(empty($email) || (filter_var($email,FILTER_VALIDATE_EMAIL))=== false){

@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\CourManager;
+use \Manager\MessageManager;
 use \Manager\SessionManager;
 use \Manager\ThemeManager;
 
@@ -27,7 +28,7 @@ class EtudiantController extends Controller
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
 		
-		$this->show('formateur/index',[
+		$this->show('etudiant/index',[
 			'organisedThemes' => $this->getOrganisedThemes(),
 			'cour' => $cour,
 			'messages' => $messages,
