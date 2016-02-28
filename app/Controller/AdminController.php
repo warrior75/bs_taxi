@@ -4,8 +4,8 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\CourManager;
+use \Manager\MessageManager;
 use \W\Manager\UserManager;
-use \W\Manager\MessageManager;
 use \W\Security\AuthentificationManager;
 use \DateTime;
 use \PHPMailer;
