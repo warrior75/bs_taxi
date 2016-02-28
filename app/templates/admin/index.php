@@ -2,8 +2,8 @@
 		'title' => 'admin',
 		'organisedThemes' => $organisedThemes,
 		'etudiant' => $etudiant,
-		'formateur'=>$formateur
-		
+		'formateur'=>$formateur,
+		'messages' => $messages,
 		]) ?>
 
 <?php $this->start('main_content') ?>

@@ -34,6 +34,7 @@ class AdminController extends Controller
 			 'organisedThemes' => $this->getOrganisedThemes(),
 			 'etudiant' => $etudiant,
 			'formateur'=>$formateur
+			'messages' => $messages
 			 ]);
 	}
 

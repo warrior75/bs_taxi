@@ -14,15 +14,24 @@ class EtudiantController extends Controller
 	/**
 	 * Page d'accueil par défaut
 	 */
-	public function index()
+	public function index($id = 0)
 	{
 		$this->allowTo('etudiant');
 
 		// récupérer les données de la session utilisateur
 		$loggedUser = $this->getUser();
 
+		$courManager = New CourManager();
+		$cour = $courManager->find($id);
 
-		$this->show('etudiant/index', ['organisedThemes' => $this->getOrganisedThemes()]);
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
+		
+		$this->show('formateur/index',[
+			'organisedThemes' => $this->getOrganisedThemes(),
+			'cour' => $cour,
+			'messages' => $messages,
+			]);
 	}
 
 	public function cours($id) {
