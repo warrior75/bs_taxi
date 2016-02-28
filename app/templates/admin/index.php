@@ -7,6 +7,8 @@
 		]) ?>
 
 <?php $this->start('main_content') ?>
+<?php debug($etudiant); ?>
+
         <?php if (isset($infos)) : ?>
 			<div class="col-md-4 col-md-offset-4">
             	<p class="bg-success" ><?php echo $infos; ?></p>
@@ -20,6 +22,25 @@
 					<p> <?= $cour['text_body'] ?> </p>
 					 <button class="btn btn-primary" >Valider le cours</button>
 			</div>       
-		<?php endif; ?>
+		<?php else :?>
+			<table>
+				<tr>
+					<th>Nom</th>
+					<th>Prénom</th>
+					<th>Email</th>
+					<th>Téléphone</th>
+				</tr>
+				<?php foreach($etudiant as $etudiant) : ?>
+				<tr>
+					<td><?= $etudiant['firstname']; ?></td>
+					<td><?= $etudiant['lastname'] ;?></td>
+					<td><?= $etudiant['email'];?></td>
+					<td><?= $etudiant['phone']?></td>
+				</tr>
+				<? endforeach ; ?>
+			</table>
+		<?php endif : ?>
+
+
 <?php $this->stop('main_content') ?>
 

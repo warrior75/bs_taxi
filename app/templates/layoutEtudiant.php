@@ -59,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Gestion BS TAXI</a>
+                <a class="navbar-brand" href="<?= $this->url('etudiant');?>">Gestion BS TAXI</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -279,7 +279,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i>Courss</a>
+                            <a href="#"><i class="fa fa-dashboard fa-fw"></i>Cours</a>
                         </li>
                         <?php foreach ($organisedThemes  as $themeKey => $key): ?>
                         <li>

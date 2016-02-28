@@ -6,6 +6,7 @@ use \W\Controller\Controller;
 use \Manager\CourManager;
 use \Manager\SessionManager;
 use \Manager\ThemeManager;
+use \Manager\MessageManager;
 
 
 class EtudiantController extends Controller
@@ -27,7 +28,7 @@ class EtudiantController extends Controller
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
 		
-		$this->show('formateur/index',[
+		$this->show('etudiant/index',[
 			'organisedThemes' => $this->getOrganisedThemes(),
 			'cour' => $cour,
 			'messages' => $messages,

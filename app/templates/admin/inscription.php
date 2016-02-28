@@ -19,15 +19,22 @@
                                 <p class="bg-success" ><?php echo $infos; ?></p>
                              <?php endif; ?>
                                 <div class="form-group">
-                                <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Prénom *" name="firstname" id="firstname" required data-validation-required-message="Veuillez saissir votre prénom *">
                                     <p class="help-block text-danger"></p>
                                 </div>
+
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Nom *" name="lastname" id="lastname" required data-validation-required-message="Veuillez saissir votre nom">
                                     <p class="help-block text-danger"></p>
                                 </div>
+
+                                <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Email *" name="email" id="email" required data-validation-required-message="Veuillez saisir votre adresse email">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Numéro de tel *" name="phone" id="phone" required data-validation-required-message="Veuillez saisir votre adresse email">
                                     <p class="help-block text-danger"></p>
                                 </div>
 

@@ -2,13 +2,16 @@
 
 namespace Controller;
 
+use \W\Manager\Manager;
 use \W\Controller\Controller;
 use \W\Security\AuthentificationManager;
 use \DateTime;
 use \PHPMailer;
 use \Manager\CourManager;
 use \Manager\MessageManager;
-use \Manager\UserManager;
+
+use \W\Manager\UserManager;
+
 
 
 class AdminController extends Controller
@@ -60,12 +63,13 @@ class AdminController extends Controller
 				$password = $this->random_password();
 				$password_hash = password_hash($password,PASSWORD_DEFAULT); 
 				$role = trim(htmlentities($_POST['role']));
+				$phone = trim(htmlentities($_POST['phone']));
 
 				//Initialisation d'un tableau d'erreurs vide
 				$errors = [];
 
 				// Instanciation d'un objet de type UseManager
-				$userManager = new userManager();
+				$userManager = new UserManager();
 				$userManager->setTable('users');
 
 				if(empty($email) || (filter_var($email,FILTER_VALIDATE_EMAIL))=== false){
@@ -91,6 +95,7 @@ class AdminController extends Controller
 						'lastname' => $lastname,
 						'password' => $password_hash,
 						'role' => $role,
+						'phone' => $phone,
 						'created_at' => $date->format('Y-m-d H:i:s'),
 						'updated_at' => $date->format('Y-m-d H:i:s')
 					]);
@@ -111,10 +116,17 @@ class AdminController extends Controller
 		public function cours($id) {
 
 		$courManager = New CourManager();
-		$cour = $courManager->find($id);	
+		$cour = $courManager->find($id);
+
+		$userManager = New UserManager();
+		$etudiant = $userManager->findEleve();
+
+		$userFormateur = New UserManager();
+		$formateur = $userFormateur->findFormateur();
+
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
-		$this->show('admin/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages]);
+		$this->show('admin/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages , 'etudiant' => $etudiant ,'formateur'=> $formateur]);
 
 
 	}
