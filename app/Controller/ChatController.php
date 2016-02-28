@@ -16,4 +16,9 @@ class DefaultController extends Controller
 		}
 	}
 
+	// Methode qui permet de récupérer les messages
+	public function recupMessage(){
+		
+	}
+
 }
