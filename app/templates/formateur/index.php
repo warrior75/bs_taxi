@@ -31,7 +31,6 @@
 					<th>Email</th>
                     <th>Progression</th> 
 					<th>Téléphone</th>
-                    <th>Editer</th>
 				</tr>
 				<?php foreach($etudiant as $etudiant) : ?>
 				<tr>
@@ -47,7 +46,7 @@
                         </div> 
                     </td>   
 					<td>+33<?= $etudiant['phone']?></td>
-                    <td><button class="btn btn-danger" >Supprimer</button></td>
+                 
 				</tr>
 				<?php endforeach ; ?>
 			</table>
