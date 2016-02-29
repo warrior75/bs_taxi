@@ -2,12 +2,21 @@
 		'title' => 'formateur',
 		'organisedThemes' => $organisedThemes,
 		'etudiant' => $etudiant,
-		'messages' => $messages
+		'messages' => $messages,
+		'nbCoursTotal' => $nbCoursTotal,
+		'nbCoursValide' => $nbCoursValide,
+		'nbCoursProgress' => $nbCoursProgress,
+		'nbCoursInvalide' => $nbCoursInvalide
+
 		]) ?>
 
 
 <?php $this->start('main_content') ?>
-		<?php debug($etudiant);	 ?>
+	<?php echo "Valide :"; debug($nbCoursValide); ?>
+	<?php echo "Progress :"; debug($nbCoursProgress); ?>
+	<?php echo "Total : "; debug($nbCoursTotal); ?>
+	<?php echo "Invalide : "; debug($nbCoursInvalide); ?>
+	<?php  ?>
 	    <?php if (isset($infos)) : ?>
 			<div class="col-md-4 col-md-offset-4">
             	<p class="bg-success" ><?php echo $infos; ?></p>

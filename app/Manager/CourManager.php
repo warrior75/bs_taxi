@@ -10,6 +10,15 @@ class CourManager extends \W\Manager\Manager
 		return $sth->fetchAll();
 	}
 
+	// récupérer le nombre total de cours
+    public function countCours(){
+        $sql= "SELECT COUNT(*) as nbCoursTotal FROM cours";
+		$sth=$this->dbh->prepare($sql);
+		$sth->execute();
+		return $sth->fetchAll();
+    }
+    
+
 }
 
 ?>

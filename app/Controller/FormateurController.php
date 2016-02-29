@@ -4,8 +4,10 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\CourManager;
-use \Manager\UserManager;
+use \Manager\UtilisateurManager;
+use W\Manager\UserManager;
 use \Manager\MessageManager;
+use \Manager\SessionManager;
 use \DateTime;
 
 class FormateurController extends Controller
@@ -18,16 +20,38 @@ class FormateurController extends Controller
 	{
 		$this->allowTo('formateur');
 
-		$userManager = New UserManager();
+		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
 
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
+
+
+		$courManager = New CourManager();
+		$cour = $courManager->find($id);
+		$nbCoursTotalTab = $courManager->countCours();
+		$nbCoursTotal = $nbCoursTotalTab[0]['nbCoursTotal'];
+
+
+		$sessionManager = new SessionManager();
+		$nbCoursValideTab = $sessionManager->nbCourParEtudiantValide();
+		$nbCoursValide = $nbCoursValideTab[0]['nbCourParEtudiantValide'];
+		$nbCoursProgressTab = $sessionManager->nbCourParEtudiantProgress();
+		$nbCoursProgress = $nbCoursProgressTab[0]['nbCourParEtudiantProgress'];
+		$nbCoursInvalide = $nbCoursTotal-($nbCoursProgress+$nbCoursValide);
+
+
+
 		
 		$this->show('formateur/index',[
 			'organisedThemes' => $this->getOrganisedThemes(),
 			'etudiant' => $etudiant,
 			'messages' => $messages,
+			'nbCoursTotal' => $nbCoursTotal,
+			'nbCoursValide' => $nbCoursValide,
+			'nbCoursProgress' => $nbCoursProgress,
+			'nbCoursInvalide' => $nbCoursInvalide
+
 			]);
 
 	}
@@ -88,6 +112,8 @@ class FormateurController extends Controller
 
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
+		$nbCoursTotalTab = $courManager->countCours();
+		$nbCoursTotal = $nbCoursTotalTab[0]['nbCoursTotal'];
 
 		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
@@ -95,7 +121,25 @@ class FormateurController extends Controller
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
 
-		$this->show('formateur/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages , 'etudiant' => $etudiant]);
+		
+		$sessionManager = new SessionManager();
+		$nbCoursValideTab = $sessionManager->nbCourParEtudiantValide();
+		$nbCoursValide = $nbCoursValideTab[0]['nbCourParEtudiantValide'];
+		$nbCoursProgressTab = $sessionManager->nbCourParEtudiantProgress();
+		$nbCoursProgress = $nbCoursProgressTab[0]['nbCourParEtudiantProgress'];
+		$nbCoursInvalide = $nbCoursTotal-($nbCoursProgress+$nbCoursValide);
+
+		$this->show('formateur/index',[
+			'cour' => $cour, 
+			'organisedThemes' => $this->getOrganisedThemes() , 
+			'messages' => $messages , 
+			'etudiant' => $etudiant,
+			'nbCoursTotal' => $nbCoursTotal,
+			'nbCoursValide' => $nbCoursValide,
+			'nbCoursProgress' => $nbCoursProgress,
+			'nbCoursInvalide' => $nbCoursInvalide
+			
+			]);
 
 
 	}
