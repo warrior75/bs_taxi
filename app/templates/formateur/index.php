@@ -11,8 +11,6 @@
 
 
 <?php $this->start('main_content') ?>
-	<?php debug($summaryCours) ?>
-	<?php debug($nbCoursTotal) ?>
 	<?php  ?>
 	    <?php if (isset($infos)) : ?>
 			<div class="col-md-4 col-md-offset-4">
