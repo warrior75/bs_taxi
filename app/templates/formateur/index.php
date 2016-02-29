@@ -25,7 +25,7 @@
 			</div>       
 
        
-		<?php else :?>
+		<?php else:?>
 			<table class="table" >
 				<tr>
 					<th>Nom</th>
@@ -53,7 +53,7 @@
 				</tr>
 				<? endforeach ; ?>
 			</table>
-		<?php endif ; ?>
+		<?php endif; ?>
 
 		
 <?php $this->stop('main_content') ?>
