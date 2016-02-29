@@ -40,6 +40,7 @@ class EtudiantController extends Controller
 		$loggedUser = $this->getUser();
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
+		
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
 		
@@ -55,10 +56,37 @@ class EtudiantController extends Controller
 					]);
 		}
 		$this->show('etudiant/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages]);
+	}
 
-
+	public function validateCours($id){
+		$loggedUser = $this->getUser();
 		
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
 
+		$courManager = New CourManager();
+		$cour = $courManager->find($id);
+		
+		if ($cour){
+			$sessionManager = New SessionManager();
+			
+			$sessionExist = $sessionManager->findByUserIdAndCourID($loggedUser['id'],$id);
+			
+			$sessionManager->update(['status' => 'validate'],$sessionExist['id']);
+			
+			$infos = "Votre cours a été validé avec succès";
+			
+			$this->show('etudiant/index',[
+				'cour' => $cour, 
+				'organisedThemes' => $this->getOrganisedThemes() , 
+				'messages' => $messages,
+				'infos' => $infos,
+			]);
+
+		} else {
+			$this->showNotFound();
+		}
+	
 	}
 
 	private function getOrganisedThemes() {

@@ -16,6 +16,7 @@
 		['GET', '/lessonForm/[:id]', 'Formateur#lessonForm', 'lessonForm'],
 		
 		['GET', '/etudiant/[:id]', 'Etudiant#cours', 'etudiantCours'],
+		['GET', '/etudiantValidateCours/[:id]', 'Etudiant#validateCours', 'etudiantValidateCours'],
 		['GET', '/formateur/[:id]', 'Formateur#cours', 'formateurCours'],
 		['GET', '/admin/[:id]', 'Admin#cours', 'adminCours'],
 		['POST', '/session', 'Etudiant#session', 'session'],
