@@ -139,8 +139,10 @@ class FormateurController extends Controller
 		$sessionManager = new SessionManager();
 		$nbCoursValideTab = $sessionManager->nbCourParEtudiantValide();
 		$nbCoursValide = $nbCoursValideTab[0]['nbCourParEtudiantValide'];
+		
 		$nbCoursProgressTab = $sessionManager->nbCourParEtudiantProgress();
 		$nbCoursProgress = $nbCoursProgressTab[0]['nbCourParEtudiantProgress'];
+		
 		$nbCoursInvalide = $nbCoursTotal-($nbCoursProgress+$nbCoursValide);
 
 		$this->show('formateur/index',[

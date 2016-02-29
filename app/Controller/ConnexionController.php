@@ -43,6 +43,27 @@ class ConnexionController extends Controller
 				//  Teste si le mot de passe est valide
 				if($authentificationManager->isValidLoginInfo($email, $password)){
 
+					// créer
+					$sessionManager = new SessionManager();
+					$nbCoursValideTab = $sessionManager->nbCourParEtudiantValide($resultUser['id']);
+					$nbCoursValide = $nbCoursValideTab['nbCourParEtudiantValide'];
+
+					$courManager = New CourManager();
+					$nbCoursTotalTab = $courManager->countCours();
+					$nbCoursTotal = $nbCoursTotalTab[0]['nbCoursTotal'];
+
+					if ($nbCoursValideTab) {
+						$_SESSION['progress']=($nbCoursValide * 100)/$nbCoursTotal;
+					} else {
+						$_SESSION['progress'] = 0;
+					}
+
+			
+
+
+
+
+
 				$role = $resultUser['role'];
 
 					// Teste le role du user

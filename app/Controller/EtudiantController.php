@@ -74,6 +74,16 @@ class EtudiantController extends Controller
 			
 			$sessionManager->update(['status' => 'validate'],$sessionExist['id']);
 			
+			$sessionCoursValide = $sessionManager->nbCourParEtudiantValide($resultUser['id']);
+
+			$courManager = new CourManager();
+			$nbCourTotal  = $courManager->countCours();
+			if ($sessionCoursValide) {
+				$_SESSION['progress']=($sessionCoursValide[0]['nbCourParEtudiantValide'] * 100)/$nbCourTotal[0]['nbCoursTotal'];
+			} else {
+				$_SESSION['progress'] = 0;
+			}
+			// add commentaires
 			$infos = "Votre cours a été validé avec succès";
 			
 			$this->show('etudiant/index',[
