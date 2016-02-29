@@ -10,6 +10,7 @@ use \PHPMailer;
 use \Manager\CourManager;
 use \Manager\MessageManager;
 use \Manager\UtilisateurManager;
+use \Manager\SessionManager;
 
 
 
@@ -22,25 +23,48 @@ class AdminController extends Controller
 	public function index($id = 0)
 	{
 		$this->allowTo('admin');
-		$courManager = New CourManager();
-		$cour = $courManager->find($id);
 		
+
 		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
 
-		$userFormateur = New UtilisateurManager();
-		$formateur = $userFormateur->findFormateur();
-		
+			$courManager = New CourManager();
+			$cour = $courManager->find($id);
+			$nbCoursTotalTab = $courManager->countCours();
+			$nbCoursTotal = $nbCoursTotalTab[0]['nbCoursTotal'];
+
+
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
 
+		$summaryCours = [];
+
+		foreach ($etudiant as $value) {
+
+			$sessionManager = new SessionManager();
+			$nbCoursValide = $sessionManager->nbCourParEtudiantValide($value['id']);
+			$summaryCours[$value['id']]= [
+					'etudiant' => $value,
+					'nbCoursValide' =>$nbCoursValide['nbCourParEtudiantValide'],
+				];
+		}
+
+		$userFormateur = New UtilisateurManager();
+		$formateur = $userFormateur->findFormateur();
+
+
+
+		
 		$this->show('admin/index',[
-			'cour' => $cour,
 			'organisedThemes' => $this->getOrganisedThemes(),
+			'cour' => $cour,
 			'etudiant' => $etudiant,
-			'formateur'=>$formateur,
-			'messages' => $messages
-			 ]);
+			'formateur' => $formateur,
+			'messages' => $messages,
+			'nbCoursTotal' => $nbCoursTotal,
+			'summaryCours' => $summaryCours
+
+			]);
 	}
 
 	// fonction privée qui génére un mdp aléatoire
@@ -136,16 +160,34 @@ class AdminController extends Controller
 
 		$courManager = New CourManager();
 		$cour = $courManager->find($id);
+		$nbCoursTotalTab = $courManager->countCours();
+		$nbCoursTotal = $nbCoursTotalTab[0]['nbCoursTotal'];
 
 		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
 
-		$userFormateur = New UtilisateurManager();
-		$formateur = $userFormateur->findFormateur();
-
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
-		$this->show('admin/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages , 'etudiant' => $etudiant ,'formateur'=> $formateur]);
+
+		
+		$sessionManager = new SessionManager();
+		$nbCoursValideTab = $sessionManager->nbCourParEtudiantValide();
+		$nbCoursValide = $nbCoursValideTab[0]['nbCourParEtudiantValide'];
+		$nbCoursProgressTab = $sessionManager->nbCourParEtudiantProgress();
+		$nbCoursProgress = $nbCoursProgressTab[0]['nbCourParEtudiantProgress'];
+		$nbCoursInvalide = $nbCoursTotal-($nbCoursProgress+$nbCoursValide);
+
+		$this->show('admin/index',[
+			'cour' => $cour, 
+			'organisedThemes' => $this->getOrganisedThemes() , 
+			'messages' => $messages , 
+			'etudiant' => $etudiant,
+			'nbCoursTotal' => $nbCoursTotal,
+			'nbCoursValide' => $nbCoursValide,
+			'nbCoursProgress' => $nbCoursProgress,
+			'nbCoursInvalide' => $nbCoursInvalide
+			
+			]);
 
 
 	}

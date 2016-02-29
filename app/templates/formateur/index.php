@@ -1,8 +1,8 @@
 <?php $this->layout('layoutFormateur', [
 		'cour' => $cour,
 		'title' => 'formateur',
-		'organisedThemes' => $organisedThemes,
 		'etudiant' => $etudiant,
+		'organisedThemes' => $organisedThemes,
 		'messages' => $messages,
 		'nbCoursTotal' => $nbCoursTotal,
 		'summaryCours' => $summaryCours

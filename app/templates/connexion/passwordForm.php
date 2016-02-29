@@ -1,4 +1,32 @@
-<?php $this->layout('layoutAdmin', ['title' => 'admin']) ?>
+<?php 
+    $role = $_SESSION['user']['role'];
+      
+    if ($role=='admin') {
+             $this->layout('layoutAdmin', [
+            'title' => 'admin',
+            'cour' => $cour,
+            'organisedThemes' => $organisedThemes,
+            'messages' => $messages,
+
+            ]);
+    } 
+    if ($role=='formateur') {
+            $this->layout('layoutFormateur', [
+            'title' => 'formateur',
+            'cour' => $cour,
+            'organisedThemes' => $organisedThemes,
+            'messages' => $messages,
+            ]);
+    } 
+    if ($role=='etudiant') {
+            $this->layout('layoutEtudiant', [
+            'title' => 'etudiant',
+            'cour' => $cour,
+            'organisedThemes' => $organisedThemes,
+            'messages' => $messages,
+            ]);
+    } 
+?>
 
 <?php $this->start('main_content') ?>
             <!-- Ajout user -->

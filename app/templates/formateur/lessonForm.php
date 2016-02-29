@@ -1,6 +1,8 @@
-<?php $this->layout('layoutFormateur', 
-    ['title' => 'Formateur',
-    'organisedThemes' => $organisedThemes
+<?php $this->layout('layoutFormateur', [
+    'title' => 'Formateur',
+    'organisedThemes' => $organisedThemes,
+    'cour' => $cour, 
+    'messages' => $messages, 
     ]) ?>
 <?php $this->start('main_content') ?>
     <?php if(isset($cour) && $cour['id'] != 0) :?>

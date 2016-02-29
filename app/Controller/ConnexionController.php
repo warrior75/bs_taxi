@@ -6,6 +6,11 @@ use \W\Controller\Controller;
 use \W\Manager\Manager;
 use \W\Manager\UserManager;
 use \W\Security\AuthentificationManager;
+use \Manager\CourManager;
+use \Manager\UtilisateurManager;
+use \Manager\MessageManager;
+use \Manager\SessionManager;
+use \DateTime;
 
 class ConnexionController extends Controller
 {
@@ -150,8 +155,45 @@ class ConnexionController extends Controller
 		}
 	}
 
-	public function passwordForm(){
-		$this->show('connexion/passwordForm');
+	public function passwordForm($id=0){
+		$courManager = New CourManager();
+		$cour = $courManager->find($id);
+		
+		$messagesManager = new MessageManager();
+		$messages = $messagesManager->getMessage();
+		
+		$this->show('connexion/passwordForm',
+			[
+				'cour' => $cour, 
+				'organisedThemes' => $this->getOrganisedThemes() , 
+				'messages' => $messages , 
+			]);
+	}
+
+		private function getOrganisedThemes() {
+		$courManager = New CourManager();
+		$coursAndThemes =  $courManager->findThemeAndCours();
+
+		$organisedThemes = [];
+
+		foreach ($coursAndThemes as $key => $val) {
+
+			$themeName = ucfirst($val['theme_name']);
+
+			// Si la clé existe pas dans le tab $organisedThemes, je la crée
+			if(!array_key_exists($themeName, $organisedThemes)) {
+				$organisedThemes[$themeName] =  [];
+			}
+
+			// Ensuite j'insere les donnée du cours
+			$organisedThemes[$themeName][] = [
+				'title' => $val['title'],
+				'text_body' => $val['text_body'],
+				'id' => $val['id']
+			];
+		}
+
+		return $organisedThemes;
 	}
 
 }

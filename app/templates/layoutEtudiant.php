@@ -59,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?= $this->url('etudiant');?>">Gestion BS TAXI</a>
+                <a class="navbar-brand" href="<?= $this->url('etudiant');?>"><i class="fa fa-home"></i> Gestion BS TAXI</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -262,8 +262,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
+                        <li><a href="<?= $this->url('passwordForm');?>"><i class="fa fa-lock fa-fw"></i>Changer Mot de passe</a></li>
                         <li class="divider"></li>
                         <li><a href="<?= $this->url('deconnexion'); ?>"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
                         </li>
@@ -284,7 +283,7 @@
                         <?php foreach ($organisedThemes  as $themeKey => $key): ?>
                         <li>
 
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> <?php echo $themeKey;?>  <span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> <?php echo $themeKey;?>  <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <?php foreach ($key as $value) :?>
                                 <li> 
