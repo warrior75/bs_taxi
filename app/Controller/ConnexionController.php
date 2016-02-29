@@ -160,11 +160,7 @@ class ConnexionController extends Controller
 
 						$messagesManager = new MessageManager();
 						$messages = $messagesManager->getMessage();
-						$this->show('admin/index',[
-							'cour' => $cour, 
-							'organisedThemes' => $this->getOrganisedThemes() , 
-							'messages' => $messages ,
-							]);
+						$this->redirectToRoute('admin',['infos'=>$infos]);
 					}
 
 					if( $role === "formateur"){
@@ -174,11 +170,7 @@ class ConnexionController extends Controller
 
 						$messagesManager = new MessageManager();
 						$messages = $messagesManager->getMessage();
-						$this->show('admin/index',[
-							'cour' => $cour, 
-							'organisedThemes' => $this->getOrganisedThemes() , 
-							'messages' => $messages ,
-							]); 
+						$this->redirectToRoute('formateur',['infos'=>$infos]);
 					} 
 
 					if( $role === "etudiant"){
@@ -188,11 +180,7 @@ class ConnexionController extends Controller
 
 						$messagesManager = new MessageManager();
 						$messages = $messagesManager->getMessage();
-						$this->show('admin/index',[
-							'cour' => $cour, 
-							'organisedThemes' => $this->getOrganisedThemes() , 
-							'messages' => $messages ,
-							]);
+						$this->redirectToRoute('etudiant',['infos'=>$infos]);
 					} 
 				}else{
 					$this->showNotFound();

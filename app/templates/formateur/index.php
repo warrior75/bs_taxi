@@ -6,8 +6,8 @@
 		'messages' => $messages,
 		'nbCoursTotal' => $nbCoursTotal,
 		'summaryCours' => $summaryCours,
-		'errors' => $errors
-
+		'errors' => $errors,
+		'infos' => $infos
 		]) ?>
 
 
@@ -15,6 +15,12 @@
 	    <?php if (isset($errors)) : ?>
 			<div class="col-md-4 col-md-offset-4">
             	<p class="bg-danger" ><?php echo $errors; ?></p>
+    		</div>
+    	<?php endif; ?>
+
+    	 <?php if (isset($infos)) : ?>
+			<div class="col-md-4 col-md-offset-4">
+            	<p class="bg-succes" ><?php echo $infos; ?></p>
     		</div>
     	<?php endif; ?>
 
