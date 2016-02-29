@@ -4,6 +4,7 @@
         'etudiant' => $etudiant,
         'formateur'=>$formateur,
         'messages' => $messages,
+        'cour' => $cour,
         ]) ?>
 
 <?php $this->start('main_content') ?>

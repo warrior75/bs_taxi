@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Manager\Manager;
 use \W\Controller\Controller;
 use \W\Security\AuthentificationManager;
+use \W\Manager\UserManager;
 use \DateTime;
 use \PHPMailer;
 use \Manager\CourManager;
@@ -77,7 +78,7 @@ class AdminController extends Controller
 
 
 	// Traitement du formulaire d'inscription
-	public function register(){
+	public function register($id = 0){
 		if(isset($_POST['addUser'])){
 				// Création de mes variables
 				$firstname = trim(htmlentities($_POST['firstname']));
@@ -93,7 +94,7 @@ class AdminController extends Controller
 
 				// Instanciation d'un objet de type UseManager
 
-				$userManager = new UtilisateurManager();
+				$userManager = new UserManager();
 
 				$userManager->setTable('users');
 
@@ -125,8 +126,17 @@ class AdminController extends Controller
 						'updated_at' => $date->format('Y-m-d H:i:s')
 					]);
 					$infos = " Inscription réussie <br> Identifiant: $email <br> Mot de passe : $password ";
+					$courManager = New CourManager();
+					$cour = $courManager->find($id);
 
-					$this->show('admin/inscription',['infos' => $infos]);
+					$messagesManager = new MessageManager();
+					$messages = $messagesManager->getMessage();
+					$this->show('admin/inscription',[
+						'infos' => $infos,
+						'cour' => $cour, 
+						'organisedThemes' => $this->getOrganisedThemes() , 
+						'messages' => $messages , 
+						]);
 	 
 				}
 

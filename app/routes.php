@@ -5,7 +5,7 @@
 		['POST', '/formConnexion', 'Connexion#index', 'formConnexion'],
 		['GET', '/connexion', 'Connexion#pageConnexion', 'connexion'],
 		['GET', '/admin/[:id]', 'Admin#index', 'admin'],
-		['POST', '/admin/register', 'Admin#register', 'register'],
+		['POST', '/admin/register/[:id]', 'Admin#register', 'register'],
 		['GET', '/admin/inscription/[:id]', 'Admin#inscription', 'inscription'],
 		['GET', '/etudiant', 'etudiant#index', 'etudiant'],
 		['GET', '/formateur/[:id]', 'formateur#index', 'formateur'],

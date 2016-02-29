@@ -98,7 +98,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i>Cours</a>
+                            <a href="#"><i class="fa fa-dashboard fa-fw"></i>Liste des cours</a>
                         </li>
                         <?php foreach ($organisedThemes  as $themeKey => $key): ?>
                         <li>
