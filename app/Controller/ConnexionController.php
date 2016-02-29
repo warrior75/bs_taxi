@@ -11,15 +11,14 @@ class ConnexionController extends Controller
 {
 
 
-// connexion à la base de données
-protected $dbh;
+
 
 	// Traitement du formulaire de connexion
 	public function index(){
 
 		if(isset($_POST['action'])){
 
-			print_r($_POST);
+			
 			$email = trim(htmlentities($_POST['email']));
 			$password = trim(htmlentities($_POST['password']));
 
@@ -73,6 +72,11 @@ protected $dbh;
 	}
 	public function pageConnexion()
 	{
+		if(isset($_SESSION['user'])){
+			$role = $_SESSION['user']['role'];
+			$this->redirectToRoute($role);
+		}
+		
 		$this->show('connexion/pageConnexion');
 	}
 

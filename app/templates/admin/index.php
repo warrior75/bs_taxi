@@ -34,7 +34,7 @@
 				<tr class="success">
 					<td><?= $etudiant['firstname']; ?></td>
 					<td><?= $etudiant['lastname'] ;?></td>
-					<td><?= $etudiant['email'];?></td>
+					<td><a href="mailto:<?= $etudiant['email'];?>" target="_top"><i class="fa fa-envelope"></i> </a><?= $etudiant['email'];?></td>
 					<td>+33<?= $etudiant['phone']?></td>
 					<td><button class="btn btn-danger">Supprimer</button></td>
 				</tr>

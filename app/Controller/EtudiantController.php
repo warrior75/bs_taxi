@@ -7,7 +7,7 @@ use \Manager\CourManager;
 use \Manager\MessageManager;
 use \Manager\SessionManager;
 use \Manager\ThemeManager;
-use \Manager\MessageManager;
+
 
 
 class EtudiantController extends Controller

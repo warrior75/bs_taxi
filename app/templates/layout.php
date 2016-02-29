@@ -75,9 +75,17 @@
 						<a class="page-scroll" href="#contact">Contact</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="<?= $this->url('connexion'); ?>">Se Connecter</a>
-					</li>
-				</ul>
+                        <?php if(isset($_SESSION['user'])) : ?>
+                           <?php  $role = $_SESSION['user']['role']; ?>
+          
+                            <a class="page-scroll" href=" <?= $this->url($role); ?> ">Mon espace</a>
+                        
+                        <?php else: ?>
+
+                              <a class="page-scroll" href="<?= $this->url('connexion'); ?>">Se Connecter</a>
+                        <?php  endif;?>
+                    </li>
+                </ul>
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>

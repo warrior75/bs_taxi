@@ -116,3 +116,7 @@ padding : 20px ;
 .section-heading{
 	margin-bottom : 30px;
 }
+
+.table{
+	border-radius: 5px;
+}
