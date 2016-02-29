@@ -96,9 +96,9 @@
 	<header>
 		<div class="container">
 			<div class="intro-text">
-				<div class="intro-lead-in">Bienvenue sur site de formation de taxi !</div>
-				<div class="intro-heading">It's Nice To Meet You</div>
-				<a href="#services" class="page-scroll btn btn-xl">En savoir plus</a>
+				<div class="intro-lead-in"></div>
+				<div class="intro-heading"></div>
+				
 			</div>
 		</div>
 	</header>

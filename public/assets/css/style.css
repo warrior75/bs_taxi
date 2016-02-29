@@ -120,3 +120,7 @@ padding : 20px ;
 .table{
 	border-radius: 5px;
 }
+
+header .container{
+	height: 900px;
+}
