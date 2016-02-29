@@ -47,7 +47,7 @@
                         </div> 
                     </td>   
 					<td>+33<?= $etudiant['phone']?></td>
-                    <td><button class="btn btn-danger" >Supprimer</button></td>
+                    <td><a href="<?php echo $this->url('delete',['id'=>$etudiant['id']]) ; ?>" class="btn btn-danger"  >Supprimer</a></td>
 				</tr>
 				<?php endforeach ; ?>
 			</table>
@@ -66,7 +66,7 @@
 					<td><?= $formateur['lastname'] ;?></td>
 					<td><?= $formateur['email'];?></td>  
 					<td>+33<?= $formateur['phone']?></td>
-                    <td><button class="btn btn-danger" >Supprimer</button></td>
+  <td><a href="<?php echo $this->url('delete',['id'=>$formateur['id']]) ; ?>" class="btn btn-danger"  >Supprimer</a></td>
 				</tr>
 				<?php endforeach ; ?>
 			</table>

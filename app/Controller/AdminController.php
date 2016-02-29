@@ -203,6 +203,12 @@ class AdminController extends Controller
 
 
 	}
+	public function delete($id){
+		$userManager = new UserManager();
+		$userManager->setTable('users');
+		$userManager->delete($id);
+		$this->redirectToRoute('admin');
+	}
 
 	private function getOrganisedThemes() {
 		$courManager = New CourManager();
