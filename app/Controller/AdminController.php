@@ -122,7 +122,12 @@ class AdminController extends Controller
 
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
-		$this->show('admin/inscription',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes() , 'messages' => $messages , 'etudiant' => $etudiant ,'formateur'=> $formateur]);
+		$this->show('admin/inscription',[
+			'cour' => $cour, 
+			'organisedThemes' => $this->getOrganisedThemes() , 
+			'messages' => $messages , 
+			'etudiant' => $etudiant ,
+			'formateur'=> $formateur]);
 
 	}
 

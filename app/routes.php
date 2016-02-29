@@ -8,7 +8,7 @@
 		['POST', '/admin/register', 'Admin#register', 'register'],
 		['GET', '/admin/inscription/[:id]', 'Admin#inscription', 'inscription'],
 		['GET', '/etudiant', 'etudiant#index', 'etudiant'],
-		['GET', '/formateur', 'formateur#index', 'formateur'],
+		['GET', '/formateur/[:id]', 'formateur#index', 'formateur'],
 		['GET', '/deconnexion', 'Connexion#deconnexion', 'deconnexion'],
 		['POST', '/resetPassword', 'Connexion#resetPassword', 'resetPassword'],
 		['GET', '/passwordForm', 'Connexion#passwordForm', 'passwordForm'],

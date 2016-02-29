@@ -16,7 +16,7 @@ class FormateurController extends Controller
 	/**
 	 * Page d'accueil par défaut
 	 */
-	public function index()
+	public function index($id =0)
 	{
 		$this->allowTo('formateur');
 
@@ -45,6 +45,7 @@ class FormateurController extends Controller
 		
 		$this->show('formateur/index',[
 			'organisedThemes' => $this->getOrganisedThemes(),
+			'cour' => $cour,
 			'etudiant' => $etudiant,
 			'messages' => $messages,
 			'nbCoursTotal' => $nbCoursTotal,

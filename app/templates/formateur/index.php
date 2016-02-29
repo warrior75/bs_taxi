@@ -1,4 +1,5 @@
 <?php $this->layout('layoutFormateur', [
+		'cour' => $cour,
 		'title' => 'formateur',
 		'organisedThemes' => $organisedThemes,
 		'etudiant' => $etudiant,
