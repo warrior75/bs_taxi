@@ -18,11 +18,12 @@ class SessionManager extends \W\Manager\Manager
 	}
 
 	   // compter le nombre de cours validé par étudiant
-        public function nbCourParEtudiantValide() {
-            $sql= "SELECT COUNT(*) as nbCourParEtudiantValide FROM sessions INNER JOIN users WHERE status = 'validate' AND users_id = users.id ";
+        public function nbCourParEtudiantValide($id) {
+            $sql= "SELECT COUNT(*) as nbCourParEtudiantValide FROM sessions WHERE status = 'validate' AND users_id = :id ";
             $sth=$this->dbh->prepare($sql);
+            $sth->bindValue(':id',$id);
             $sth->execute();
-            return $sth->fetchAll();
+            return $sth->fetch();
         }
         
         // compter le nombre de cours validé par étudiant
@@ -32,6 +33,9 @@ class SessionManager extends \W\Manager\Manager
             $sth->execute();
             return $sth->fetchAll();
         }
+
+        // récupérer un tableau des users avec les cours validés
+ 
 
 }
 

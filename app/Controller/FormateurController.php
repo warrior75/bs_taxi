@@ -23,22 +23,28 @@ class FormateurController extends Controller
 		$userManager = New UtilisateurManager();
 		$etudiant = $userManager->findEleve();
 
+			$courManager = New CourManager();
+			$cour = $courManager->find($id);
+			$nbCoursTotalTab = $courManager->countCours();
+			$nbCoursTotal = $nbCoursTotalTab[0]['nbCoursTotal'];
+
+
 		$messagesManager = new MessageManager();
 		$messages = $messagesManager->getMessage();
 
+		$summaryCours = [];
 
-		$courManager = New CourManager();
-		$cour = $courManager->find($id);
-		$nbCoursTotalTab = $courManager->countCours();
-		$nbCoursTotal = $nbCoursTotalTab[0]['nbCoursTotal'];
+		foreach ($etudiant as $value) {
+
+			$sessionManager = new SessionManager();
+			$nbCoursValide = $sessionManager->nbCourParEtudiantValide($value['id']);
+			$summaryCours[$value['id']]= [
+					'etudiant' => $value,
+					'nbCoursValide' =>$nbCoursValide['nbCourParEtudiantValide'],
+				];
 
 
-		$sessionManager = new SessionManager();
-		$nbCoursValideTab = $sessionManager->nbCourParEtudiantValide();
-		$nbCoursValide = $nbCoursValideTab[0]['nbCourParEtudiantValide'];
-		$nbCoursProgressTab = $sessionManager->nbCourParEtudiantProgress();
-		$nbCoursProgress = $nbCoursProgressTab[0]['nbCourParEtudiantProgress'];
-		$nbCoursInvalide = $nbCoursTotal-($nbCoursProgress+$nbCoursValide);
+		}
 
 
 
@@ -49,9 +55,7 @@ class FormateurController extends Controller
 			'etudiant' => $etudiant,
 			'messages' => $messages,
 			'nbCoursTotal' => $nbCoursTotal,
-			'nbCoursValide' => $nbCoursValide,
-			'nbCoursProgress' => $nbCoursProgress,
-			'nbCoursInvalide' => $nbCoursInvalide
+			'summaryCours' => $summaryCours
 
 			]);
 

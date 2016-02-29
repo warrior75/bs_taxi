@@ -12,14 +12,32 @@
     	<?php endif; ?>
 
 
-		<?php if (isset($cour)) :?>
-			<div class="cour">
-					<h2 class="cour_title"><?= $cour['title']; ?></h2>
-					<p class="cour_body"> <?= $cour['text_body'] ?> </p>
-
+		<?php if (isset($cour) && $cour['id'] != 0): ?>
+			<div>
+					<h2><?= $cour['title']; ?></h2>
+					<p> <?= $cour['text_body'] ?> </p>
+					 <button class="btn btn-primary" >Valider le cours</button>
 			</div>       
-					<button class="btn btn-primary" action="session">Valider le cours</button>
-		<?php endif; ?>
+		<?php else: ?>
+			<table class="table">
+				<tr class="info">
+					<th>Nom</th>
+					<th>Prénom</th>
+					<th>Email</th>
+					<th>Téléphone</th>
+					<th>Editer</th>
+				</tr>
+				<?php foreach($etudiant as $etudiant) : ?>
+				<tr class="success">
+					<td><?= $etudiant['firstname']; ?></td>
+					<td><?= $etudiant['lastname'] ;?></td>
+					<td><a href="mailto:<?= $etudiant['email'];?>" target="_top"><i class="fa fa-envelope"></i> </a><?= $etudiant['email'];?></td>
+					<td>+33<?= $etudiant['phone']?></td>
+					<td><button class="btn btn-danger">Supprimer</button></td>
+				</tr>
+				<?php endforeach ; ?>
+			</table>
+		<?php endif ; ?>
 		
 <?php $this->stop('main_content') ?>
 
