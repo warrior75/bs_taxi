@@ -163,7 +163,8 @@ class ConnexionController extends Controller
 						$this->show('admin/index',[
 							'cour' => $cour, 
 							'organisedThemes' => $this->getOrganisedThemes() , 
-							'messages' => $messages , 
+							'messages' => $messages ,
+							]);
 					}
 
 					if( $role === "formateur"){
@@ -176,7 +177,8 @@ class ConnexionController extends Controller
 						$this->show('admin/index',[
 							'cour' => $cour, 
 							'organisedThemes' => $this->getOrganisedThemes() , 
-							'messages' => $messages , 
+							'messages' => $messages ,
+							]); 
 					} 
 
 					if( $role === "etudiant"){
@@ -190,6 +192,7 @@ class ConnexionController extends Controller
 							'cour' => $cour, 
 							'organisedThemes' => $this->getOrganisedThemes() , 
 							'messages' => $messages ,
+							]);
 					} 
 				}else{
 					$this->showNotFound();
@@ -206,6 +209,7 @@ class ConnexionController extends Controller
 							'cour' => $cour, 
 							'organisedThemes' => $this->getOrganisedThemes(), 
 							'messages' => $messages,
+							]);
 			}
 
 
