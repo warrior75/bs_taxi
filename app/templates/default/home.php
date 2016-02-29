@@ -1,48 +1,56 @@
-<?php $this->layout('layout', ['title' => 'Accueil']) ?>
+<?php $this->layout('layout', [
+'title' => 'Accueil',
+'infos' => $infos,
+'errors' =>$errors
+
+]) ?>
 
 <?php $this->start('main_content') ?>
 
    
-	<section id="metier">
+    <section id="metier">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Le Metier</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-taxi fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Salarié en entreprise</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">L'autorisation de stationnement est au nom d'une société, il s'agit bien souvent d'un véhicule de doublage (deux conducteurs pour le même véhicule). Le conducteur doit ramener chaque jour le véhicule au garage et perçoit, outre un fixe journalier au tarif en vigueur, 30% brut du compteur, il conserve les suppléments et les pourboires. L'entretien du véhicule et le carburant sont à la charge de l'employeur qui paie également les cotisations sociales. Le chauffeur reçoit chaque mois une fiche de paie.</p>
                 </div>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-road fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Locataire en entreprise</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">L'autorisation de stationnement est au nom d'une société qui confie au conducteur un véhicule tout équipé taxi.
+Le locataire paie un loyer mensuel ( payable par semaine) ce loyer est TTC mais le chauffeur récupère la TVA.</p>
                 </div>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-male fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Artisan</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">L'artisan achète ou obtient une licence d'artisan, il achète également son véhicule. L'autorisation de stationnement est à son nom. Les charges sociales, l'assurance, l'entretien, le carburant sont réglés par l'artisan. Il bénéficie de la détaxe sur les carburants. Il est travailleur indépendant.
+</p>
                 </div>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-euro fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Actionnaire</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">L'actionnaire achète une action dans une société déjà existante. Le prix d'une action est beaucoup moins élevé que celui d'une licence d'artisan. L'autorisation de stationnement est au nom d'une coopérative ainsi que la carte grise du véhicule. L'actionnaire paie à la coopérative une somme mensuelle équivalente aux charges sociales, aux frais de gestion et à l'assurance du véhicule.
+</p>
                 </div>
             </div>
         </div>
@@ -76,7 +84,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?= $this->assetUrl('img/about/2.jpg') ?>" alt="">
+                                <img class="img-circle img-responsive" src="<?= $this->assetUrl('img/about/2.png') ?>" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -104,7 +112,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?= $this->assetUrl('img/about/4.jpg') ?>" alt="">
+                                <img class="img-circle img-responsive" src="<?= $this->assetUrl('img/about/4.png') ?>" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -112,7 +120,7 @@
                                    
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">U_ne épreuve d’admissibilité : l’épreuve nationale (connaissance de la langue française, <br>réglementation nationale de la profession, gestion, code de la route, sécurité).<br>• une épreuve d’admission : l’épreuve locale ou départementale (connaissance <br>topographique, réglementation locale, itinéraires, conduite d’un véhicule taxi, <br>mémorisation d’adresses, connaissance des monuments, bâtiments publics, <br>administrations…).</p>
+                                    <p class="text-muted">Une épreuve d’admissibilité : l’épreuve nationale (connaissance de la langue française, <br>réglementation nationale de la profession, gestion, code de la route, sécurité).<br>• une épreuve d’admission : l’épreuve locale ou départementale (connaissance <br>topographique, réglementation locale, itinéraires, conduite d’un véhicule taxi, <br>mémorisation d’adresses, connaissance des monuments, bâtiments publics, <br>administrations…).</p>
                                 </div>
                             </div>
                         </li>
@@ -120,7 +128,7 @@
                             <div class="timeline-image">
                                 <h4>Qu'attendez
                                     <br>Vous
-                                    <br>Pour être Taxi!</h4>
+                                    <br>....</h4>
                             </div>
                         </li>
                     </ul>
@@ -167,7 +175,7 @@
             </div>
  <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="http://www.pole-emploi.fr/employeur/la-preparation-operationnelle-a-l-emploi-poe--@/article.jspz?id=60880" target="_blank" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 
@@ -181,7 +189,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="http://www.pole-emploi.fr/candidat/l-aide-individuelle-a-la-formation-aif--@/article.jspz?id=60856" target="_blank" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 
@@ -195,7 +203,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <a href="https://www.bred.fr/index.htmlhttps://www.bred.fr/index.html" target="_blank" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 
@@ -218,7 +226,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">contact</h2>
+                    <h2   id="contact" class="section-subheading text-muted">contact</h2>
                     <h3 class="section-subheading text-muted">Contactez-nous pour avoir des informations complémentaires</h2>
                 </div>
             </div>
@@ -231,8 +239,11 @@
                     <div id="map"></div>
 
                 </div>
-                <div class="col-sm-6">
-                    <form class="form-horizontal" role="form" method="post" action="index.php">
+            <div class="col-sm-6">
+                    <form class="form-horizontal" role="form" method="post" action="<?php echo $this->url('mail') ; ?>">
+                     <?php if (isset($infos['good'])) : ?>
+                                <p class="bg-success" ><?php echo $infos['good']; ?></p>
+                             <?php endif; ?>
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
@@ -246,12 +257,18 @@
                             </div>
                         </div>
                         <div class="form-group">
+                         <?php if (isset($errors['message'])) : ?>
+                                <p class="bg-danger" ><?php echo $errors['message']; ?></p>
+                             <?php endif; ?>
                             <label for="message" class="col-sm-2 control-label">Message</label>
                             <div class="col-sm-10">
                                 <textarea class="form-control" rows="4" name="message"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
+                         <?php if (isset($errors['robot'])) : ?>
+                                <p class="bg-danger" ><?php echo $errors['robot']; ?></p>
+                             <?php endif; ?>
                             <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
@@ -273,7 +290,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted"></p>
                 </div>
             </div>
         </div>
