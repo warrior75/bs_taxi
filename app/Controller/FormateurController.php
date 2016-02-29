@@ -65,16 +65,22 @@ class FormateurController extends Controller
 		//On autorise uniquement le formateur à ajouter un cour 
 		$this->allowTo('formateur');
 		if(isset($_POST['addLesson'])){
+
+
 			//Récupération des données du formulaire
 			$titre = trim(htmlentities($_POST['titre']));
 			$themes_id = trim(htmlentities($_POST['themes_id']));
 			$text_body = trim(htmlentities($_POST['text_body']));
 
+		  
 			// Initialisation d'un tableau d'erreurs 
 			$errors = [];
 
-			if(empty($titre) || empty($theme_id) || empty($text_body)){
-				$errors['vide'] = "Un des champs n'est pas renseigné";
+
+	
+
+			if( empty($titre) || empty($themes_id) || empty($text_body)){
+				$errors = "Un des champs n'est pas renseigné";
 				
 			}
 
@@ -90,6 +96,7 @@ class FormateurController extends Controller
 					'created_at' => $date->format('Y-m-s H:i:s')
 				]); 
 
+
 				if($cours){
 					$_SESSION['message'] = "Cours ajouté avec succès";
 
@@ -100,7 +107,7 @@ class FormateurController extends Controller
 				$this->redirectToRoute('formateur');
 
 			}else{
-				$this->show('formateur/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes()]);
+				$this->show('formateur/index',['cour' => $cour, 'organisedThemes' => $this->getOrganisedThemes(),'$errors' =>$errors]);
 			}
 		}
 

@@ -11,20 +11,20 @@
                     <p class="cour_body"> <?= $cour['text_body'] ?> </p>
             </div> 
               
-        <?php endif; ?>
+    <?php endif; ?>
 
 <!-- Ajout cours -->
-<section id="add-user">
+<section id="add-lesson">
     <div class="row">
         <div class="col-lg-12 text-center">
             <h2 class="section-heading">Ajouter un cours</h2>
         </div>
-    </div>
-    <div class="row">
+  
+    <div class="row" >
         <div class="col-lg-12">
 
             <div class="row">
-             <div class="col-md-10 col-md-offset-1">
+             <div class="col-md-8 col-md-offset-1">
                 <?php if (isset($errors['vide'])) : ?>
                 <p class="bg-danger" ><?php echo $errors['vide']; ?></p>
             <?php endif; ?>
@@ -56,6 +56,7 @@
             </div>
         </form>
     </div>   
+</div>
 </div>
 </div>
 </section>	

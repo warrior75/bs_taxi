@@ -5,15 +5,16 @@
 		'organisedThemes' => $organisedThemes,
 		'messages' => $messages,
 		'nbCoursTotal' => $nbCoursTotal,
-		'summaryCours' => $summaryCours
+		'summaryCours' => $summaryCours,
+		'errors' => $errors
 
 		]) ?>
 
 
 <?php $this->start('main_content') ?>
-	    <?php if (isset($infos)) : ?>
+	    <?php if (isset($errors)) : ?>
 			<div class="col-md-4 col-md-offset-4">
-            	<p class="bg-success" ><?php echo $infos; ?></p>
+            	<p class="bg-danger" ><?php echo $errors; ?></p>
     		</div>
     	<?php endif; ?>
 
