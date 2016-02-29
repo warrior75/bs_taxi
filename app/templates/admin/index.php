@@ -18,9 +18,9 @@
 
 
 		<?php if (isset($cour) && $cour['id'] != 0) :?>
-			<div>
-					<h2 class="cour_title"><?= $cour['title']; ?></h2>
-					<p class="cour_body"> <?= $cour['text_body'] ?> </p>
+			<div class="panel panel-default">
+					<div class="panel-heading"><h2 class="cour_title"><?= $cour['title']; ?></h2></div>
+					<div class="panel-body"><p class="cour_body"> <?= $cour['text_body'] ?> </p></div>
 			</div>       
 		<?php else :?>
 			<h2>Liste des étudiants</h2>
@@ -66,7 +66,7 @@
 					<td><?= $formateur['lastname'] ;?></td>
 					<td><?= $formateur['email'];?></td>  
 					<td>+33<?= $formateur['phone']?></td>
-  <td><a href="<?php echo $this->url('delete',['id'=>$formateur['id']]) ; ?>" class="btn btn-danger"  >Supprimer</a></td>
+  					<td><a href="<?php echo $this->url('delete',['id'=>$formateur['id']]) ; ?>" class="btn btn-danger"  >Supprimer</a></td>
 				</tr>
 				<?php endforeach ; ?>
 			</table>

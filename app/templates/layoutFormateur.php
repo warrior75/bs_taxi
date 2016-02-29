@@ -70,7 +70,7 @@
                             <i class="fa fa-plus-circle fa-fw"></i> <i class="fa fa-book"></i>
                         </a>
                         
-                       
+                        
                     </li>
                     
                     
@@ -106,7 +106,7 @@
 
                                     <a href="#"><i class="fa fa-book fa-fw"></i> <?php echo $themeKey;?>  <span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
-                                    <?php foreach ($key as $value) :?>
+                                        <?php foreach ($key as $value) :?>
                                             <li> 
                                                 <a href="<?= $this->url('formateurCours',[ 'id' => $value['id'] ]);?>"> <?php  echo $value['title']; ?> </a>
                                             </li>
@@ -136,7 +136,7 @@
 
                 <!-- /.row -->
                 <div class="col-lg-8">
-                   <section>
+                 <section>
                     <?= $this->section('main_content') ?>
                 </section>
             </div>
@@ -148,7 +148,7 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                       
+                     
                     </div>
                     <!-- /.panel-body -->
                 </div>
@@ -159,17 +159,17 @@
                         Chat
                         <div class="btn-group pull-right">
                             <button type="button" class="btn btn-default btn-xs">
-                                 <a href="<?= $this->url('formateur')?>">
-                                        <i class="fa fa-refresh fa-fw"></i> Refresh
-                                    </a>
-                            </button>
-                       
-                        </div>
+                               <a href="<?= $this->url('formateur')?>">
+                                <i class="fa fa-refresh fa-fw"></i> Refresh
+                            </a>
+                        </button>
+                        
                     </div>
+                </div>
 
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                <?php foreach($messages as $message) : ?>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <?php foreach($messages as $message) : ?>
                         <ul class="chat">
                             <li class="left clearfix">
                                 <span class="chat-img pull-left">
@@ -183,55 +183,55 @@
                                         </small>
                                     </div>
                                     <p>
-                                       <?= $message['text_body'] ; ?>
-                                    </p>
-                                </div>
-                                </li>
-                            </ul>
-                <?php endforeach ; ?>
+                                     <?= $message['text_body'] ; ?>
+                                 </p>
+                             </div>
+                         </li>
+                     </ul>
+                 <?php endforeach ; ?>
 
-                            </li>                               
-                            </div>
-                            <!-- /.panel .chat-panel -->
-                                <div class="panel-footer">
-                                    <div class="input-group">
-                                        <form action="<?= $this->url('chat'); ?>" method="POST">
-                                            <input id="btn-input" name="text_body" type="text" class="form-control input-sm" placeholder="Votre message . . ." />
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-warning btn-sm" id="btn-chat" name="sendMessage">
-                                                    Envoyer
-                                                </button>
-                                            </span>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <!-- /.panel-footer -->
-                        </div>
-                        <!-- /.col-lg-4 -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /#page-wrapper -->
-
+             </li>                               
+         </div>
+         <!-- /.panel .chat-panel -->
+         <div class="panel-footer">
+            <div class="input-group">
+                <form action="<?= $this->url('chat'); ?>" method="POST">
+                    <input id="btn-input" name="text_body" type="text" class="form-control input-sm" placeholder="Votre message . . ." required />
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning btn-sm" id="btn-chat" name="sendMessage">
+                            Envoyer
+                        </button>
+                    </span>
+                </form>
             </div>
-            <!-- /#wrapper -->
+        </div>
 
-            <!-- jQuery -->
-            <script src="<?= $this->assetUrl('bower_components/jquery/dist/jquery.min.js') ?>"></script>
+        <!-- /.panel-footer -->
+    </div>
+    <!-- /.col-lg-4 -->
+</div>
+<!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
 
-            <!-- Bootstrap Core JavaScript -->
-            <script src="<?= $this->assetUrl('bower_components/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+</div>
+<!-- /#wrapper -->
 
-            <!-- Metis Menu Plugin JavaScript -->
-            <script src="<?= $this->assetUrl('bower_components/metisMenu/dist/metisMenu.min.js') ?>"></script>
+<!-- jQuery -->
+<script src="<?= $this->assetUrl('bower_components/jquery/dist/jquery.min.js') ?>"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="<?= $this->assetUrl('bower_components/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="<?= $this->assetUrl('bower_components/metisMenu/dist/metisMenu.min.js') ?>"></script>
 
 
 
 
-            <!-- Custom Theme JavaScript -->
-            <script src="<?= $this->assetUrl('js/sb-admin-2.js') ?>"></script>
+<!-- Custom Theme JavaScript -->
+<script src="<?= $this->assetUrl('js/sb-admin-2.js') ?>"></script>
 
-        </body>
+</body>
 
-        </html>
+</html>

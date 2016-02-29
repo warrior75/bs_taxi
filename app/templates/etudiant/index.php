@@ -14,11 +14,11 @@
 
 
 		<?php if (isset($cour) && $cour['id'] != 0): ?>
-			<div class="col-md-12">
-					<h2 class="cour_title"><?= $cour['title']; ?></h2>
-					<p class="cour_body"> <?= $cour['text_body'] ;?> </p>
-					 <a class="btn btn-primary" href="<?= $this->url('etudiantValidateCours',['id'=>$cour['id']]);?>">Valider le cours</a>
+			<div class="panel panel-default">
+					<div class="panel-heading"><h2 class="cour_title"><?= $cour['title']; ?></h2></div>
+					<div class="panel-body"><p class="cour_body"> <?= $cour['text_body'] ?> </p></div>
 			</div>       
+					 <a class="btn btn-primary" href="<?= $this->url('etudiantValidateCours',['id'=>$cour['id']]);?>">Valider le cours</a>
 		<?php else: ?>
 			<div class="panel panel-default">
 					<div class="panel-heading"><h2>Bienvenue sur votre plateforme </h2></div>

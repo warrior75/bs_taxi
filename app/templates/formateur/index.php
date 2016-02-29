@@ -26,9 +26,9 @@
 
 
 		<?php if (isset($cour) && $cour['id'] != 0) :?>
-			<div>
-					<h2 class="cour_title"><?= $cour['title']; ?></h2>
-					<p class="cour_body"> <?= $cour['text_body'] ?> </p>
+			<div class="panel panel-default">
+					<div class="panel-heading"><h2 class="cour_title"><?= $cour['title']; ?></h2></div>
+					<div class="panel-body"><p class="cour_body"> <?= $cour['text_body'] ?> </p></div>
 			</div>       
 		<?php else :?>
 			<table class="table" >

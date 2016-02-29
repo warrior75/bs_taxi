@@ -43,189 +43,189 @@
     <body>
 
         <?php if (isset($_SESSION['message'])) : ?>
-        <p class="bg-success" ><?php echo $_SESSION['message']; ?></p>
-        <?php unset($_SESSION['message']); ?>
-    <?php endif; ?>
+            <p class="bg-success" ><?php echo $_SESSION['message']; ?></p>
+            <?php unset($_SESSION['message']); ?>
+        <?php endif; ?>
 
-    <div id="wrapper">
+        <div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?= $this->url('etudiant');?>"><i class="fa fa-home"></i> Gestion BS TAXI</a>
-            </div>
-            <!-- /.navbar-header -->
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?= $this->url('etudiant');?>"><i class="fa fa-home"></i> Gestion BS TAXI</a>
+                </div>
+                <!-- /.navbar-header -->
 
 
-            <ul class="nav navbar-top-links navbar-right">
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Cours validés</strong>
-                                        <span class="pull-right text-muted"><?= round($_SESSION['progress']); ?>% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?= $_SESSION['progress']; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?= $_SESSION['progress'];?>%">
-                                            <span class="sr-only"><?= $_SESSION['progress'];  ?>% Complete (success)</span>
+                <ul class="nav navbar-top-links navbar-right">
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-tasks">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p>
+                                            <strong>Cours validés</strong>
+                                            <span class="pull-right text-muted"><?= round($_SESSION['progress']); ?>% Complete</span>
+                                        </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?= $_SESSION['progress']; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?= $_SESSION['progress'];?>%">
+                                                <span class="sr-only"><?= $_SESSION['progress'];  ?>% Complete (success)</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                   
-                
-                    </ul>
-                    <!-- /.dropdown-tasks -->
-                </li>
-     
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="<?= $this->url('passwordForm');?>"><i class="fa fa-lock fa-fw"></i>Changer Mot de passe</a></li>
-                        <li class="divider"></li>
-                        <li><a href="<?= $this->url('deconnexion'); ?>"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
+                                </a>
+                            </li>
+                            
+                            
+                        </ul>
+                        <!-- /.dropdown-tasks -->
+                    </li>
+                    
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li><a href="<?= $this->url('passwordForm');?>"><i class="fa fa-lock fa-fw"></i>Changer Mot de passe</a></li>
+                            <li class="divider"></li>
+                            <li><a href="<?= $this->url('deconnexion'); ?>"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+                <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
 
-                        <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i>   Liste des cours</a>
-                        </li>
-                        <?php foreach ($organisedThemes  as $themeKey => $key): ?>
-                        <li>
+                            <li>
+                                <a href="#"><i class="fa fa-dashboard fa-fw"></i>   Liste des cours</a>
+                            </li>
+                            <?php foreach ($organisedThemes  as $themeKey => $key): ?>
+                                <li>
 
-                            <a href="#"><i class="fa fa-book fa-fw"></i> <?php echo $themeKey;?>  <span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <?php foreach ($key as $value) :?>
-                                <li> 
-                                    <a href="<?= $this->url('etudiantCours',['id'=>$value['id']]);?>"> <?php  echo $value['title']; ?> </a>
+                                    <a href="#"><i class="fa fa-book fa-fw"></i> <?php echo $themeKey;?>  <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <?php foreach ($key as $value) :?>
+                                            <li> 
+                                                <a href="<?= $this->url('etudiantCours',['id'=>$value['id']]);?>"> <?php  echo $value['title']; ?> </a>
+                                            </li>
+                                        <?php endforeach; ?>
+
+                                    </ul>
+                                    <!-- /.nav-second-level -->
                                 </li>
                             <?php endforeach; ?>
 
+
+
                         </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                <?php endforeach; ?>
-
-
-
-            </ul>
-        </div>
-        <!-- /.sidebar-collapse -->
-    </div>
-    <!-- /.navbar-static-side -->
-</nav>
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Bonjour <?= $_SESSION['user']['firstname'] ;?></h1>
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
-
-    <!-- /.row -->
-    <div class="col-lg-8">
-     <section>
-        <?= $this->section('main_content') ?>
-    </section>
-</div>
-<!-- /.col-lg-8 -->
-<div class="col-lg-4">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <i class="fa fa-bell fa-fw"></i> Contact
-        </div>
-        <!-- /.panel-heading -->
-        <div class="panel-body">
-         
-        </div>
-        <!-- /.panel-body -->
-    </div>
-    <!-- /.panel -->
-    <div class="chat-panel panel panel-default">
-        <div class="panel-heading">
-            <i class="fa fa-comments fa-fw"></i>
-            Chat
-            <div class="btn-group pull-right">
-                <button type="button" class="btn btn-default btn-xs">
-                   <a href="<?= $this->url('etudiant')?>">
-                    <i class="fa fa-refresh fa-fw"></i> Refresh
-                </a>
-            </button>
-            
-        </div>
-    </div>
-
-    <!-- /.panel-heading -->
-    <div class="panel-body">
-        <?php foreach($messages as $message) : ?>
-        <ul class="chat">
-            <li class="left clearfix">
-                <span class="chat-img pull-left">
-                    <img src="http://placehold.it/50/C0C0C0/fff" alt="User Avatar" class="img-circle" />
-                </span>
-                <div class="chat-body clearfix">
-                    <div class="header">
-                        <strong class="primary-font"> <?= $message['firstname'];?> </strong>
-                        <small class="pull-right text-muted">
-                            <i class="fa fa-clock-o fa-fw"></i> <?= $message['created_at']; ?>
-                        </small>
                     </div>
-                    <p>
-                     <?= $message['text_body'] ; ?>
-                 </p>
-             </div>
-         </li>
-     </ul>
- <?php endforeach ; ?>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Bonjour <?= $_SESSION['user']['firstname'] ;?></h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
 
-</li>                               
-</div>
-<!-- /.panel .chat-panel -->
-<div class="panel-footer">
-    <div class="input-group">
-        <form action="<?= $this->url('chat'); ?>" method="POST">
-            <input id="btn-input" name="text_body" type="text" class="form-control input-sm" placeholder="Votre message . . ." />
-            <span class="input-group-btn">
-                <button class="btn btn-warning btn-sm" id="btn-chat" name="sendMessage">
-                    Envoyer
-                </button>
-            </span>
-        </form>
+                <!-- /.row -->
+                <div class="col-lg-8">
+                   <section>
+                    <?= $this->section('main_content') ?>
+                </section>
+            </div>
+            <!-- /.col-lg-8 -->
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bell fa-fw"></i> Contact
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                       
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <div class="chat-panel panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-comments fa-fw"></i>
+                        Chat
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs">
+                             <a href="<?= $this->url('etudiant')?>">
+                                <i class="fa fa-refresh fa-fw"></i> Refresh
+                            </a>
+                        </button>
+                        
+                    </div>
+                </div>
+
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <?php foreach($messages as $message) : ?>
+                        <ul class="chat">
+                            <li class="left clearfix">
+                                <span class="chat-img pull-left">
+                                    <img src="http://placehold.it/50/C0C0C0/fff" alt="User Avatar" class="img-circle" />
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font"> <?= $message['firstname'];?> </strong>
+                                        <small class="pull-right text-muted">
+                                            <i class="fa fa-clock-o fa-fw"></i> <?= $message['created_at']; ?>
+                                        </small>
+                                    </div>
+                                    <p>
+                                       <?= $message['text_body'] ; ?>
+                                   </p>
+                               </div>
+                           </li>
+                       </ul>
+                   <?php endforeach ; ?>
+
+               </li>                               
+           </div>
+           <!-- /.panel .chat-panel -->
+           <div class="panel-footer">
+            <div class="input-group">
+                <form action="<?= $this->url('chat'); ?>" method="POST">
+                    <input id="btn-input" name="text_body" type="text" class="form-control input-sm" placeholder="Votre message . . ." required/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning btn-sm" id="btn-chat" name="sendMessage">
+                            Envoyer
+                        </button>
+                    </span>
+                </form>
+            </div>
+        </div>
+
+        <!-- /.panel-footer -->
     </div>
-</div>
-
-<!-- /.panel-footer -->
-</div>
-<!-- /.col-lg-4 -->
-<!-- /.col-lg-4 -->
+    <!-- /.col-lg-4 -->
+    <!-- /.col-lg-4 -->
 </div>
 <!-- /.row -->
 </div>
