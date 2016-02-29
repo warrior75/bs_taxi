@@ -11,7 +11,7 @@
 		['GET', '/etudiant', 'etudiant#index', 'etudiant'],
 		['GET', '/formateur/[:id]', 'formateur#index', 'formateur'],
 		['GET', '/deconnexion', 'Connexion#deconnexion', 'deconnexion'],
-		['POST', '/resetPassword', 'Connexion#resetPassword', 'resetPassword'],
+		['POST', '/resetPassword/[:id]', 'Connexion#resetPassword', 'resetPassword'],
 		['GET', '/passwordForm', 'Connexion#passwordForm', 'passwordForm'],
 		['POST', '/addLesson', 'Formateur#addLesson', 'addLesson'],
 		['GET', '/lessonForm/[:id]', 'Formateur#lessonForm', 'lessonForm'],

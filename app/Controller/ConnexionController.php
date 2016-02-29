@@ -114,7 +114,7 @@ class ConnexionController extends Controller
 		$this->redirectToRoute('home');
 	}
 
-	public function resetPassword(){
+	public function resetPassword($id=0){
 
 		if(isset($_POST['reset'])){
 			$password = trim(htmlentities($_POST['password']));
@@ -154,21 +154,58 @@ class ConnexionController extends Controller
 
 
 					if( $role === "admin"){
-						$this->show('admin/index',['infos' => $infos]);
+						
+						$courManager = New CourManager();
+						$cour = $courManager->find($id);
+
+						$messagesManager = new MessageManager();
+						$messages = $messagesManager->getMessage();
+						$this->show('admin/index',[
+							'cour' => $cour, 
+							'organisedThemes' => $this->getOrganisedThemes() , 
+							'messages' => $messages , 
 					}
 
 					if( $role === "formateur"){
-						$this->show('formateur/index',['infos' => $infos]);
+		
+						$courManager = New CourManager();
+						$cour = $courManager->find($id);
+
+						$messagesManager = new MessageManager();
+						$messages = $messagesManager->getMessage();
+						$this->show('admin/index',[
+							'cour' => $cour, 
+							'organisedThemes' => $this->getOrganisedThemes() , 
+							'messages' => $messages , 
 					} 
 
 					if( $role === "etudiant"){
-						$this->show('etudiant/index',['infos' => $infos]);
+
+						$courManager = New CourManager();
+						$cour = $courManager->find($id);
+
+						$messagesManager = new MessageManager();
+						$messages = $messagesManager->getMessage();
+						$this->show('admin/index',[
+							'cour' => $cour, 
+							'organisedThemes' => $this->getOrganisedThemes() , 
+							'messages' => $messages ,
 					} 
 				}else{
 					$this->showNotFound();
 				}
 			}else{
-				$this->show('connexion/passwordForm',['error' => $error]);
+
+						$courManager = New CourManager();
+						$cour = $courManager->find($id);
+
+						$messagesManager = new MessageManager();
+						$messages = $messagesManager->getMessage();
+						$this->show('connexion/passwordForm',[
+							'error' => $error,
+							'cour' => $cour, 
+							'organisedThemes' => $this->getOrganisedThemes(), 
+							'messages' => $messages,
 			}
 
 
