@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Connexion</h2>
-                    <h3 class="section-subheading text-muted">Connectez-vous afin d'accéder à votre espace perso</h3>
+                    <h3 class="section-subheading">Connectez-vous afin d'accéder à votre espace personnel</h3>
                 </div>
             </div>
             <div class="row">

@@ -124,3 +124,7 @@ padding : 10px ;
 header .container{
 	height: 900px;
 }
+
+.p_justify{
+	text-align: justify;
+}

@@ -182,7 +182,7 @@
                 </div>
                 <p>
                  <?= $message['text_body'] ; ?>
-             </p>
+                 </p>
          </div>
      </li>
  </ul>

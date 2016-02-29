@@ -23,7 +23,7 @@
                         <i class="fa fa-taxi fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Salarié en entreprise</h4>
-                    <p class="text-muted">L'autorisation de stationnement est au nom d'une société, il s'agit bien souvent d'un véhicule de doublage (deux conducteurs pour le même véhicule). Le conducteur doit ramener chaque jour le véhicule au garage et perçoit, outre un fixe journalier au tarif en vigueur, 30% brut du compteur, il conserve les suppléments et les pourboires. L'entretien du véhicule et le carburant sont à la charge de l'employeur qui paie également les cotisations sociales. Le chauffeur reçoit chaque mois une fiche de paie.</p>
+                    <p class="p_justify text-muted">L'autorisation de stationnement est au nom d'une société, il s'agit bien souvent d'un véhicule de doublage (deux conducteurs pour le même véhicule). Le conducteur doit ramener chaque jour le véhicule au garage et perçoit, outre un fixe journalier au tarif en vigueur, 30% brut du compteur, il conserve les suppléments et les pourboires. L'entretien du véhicule et le carburant sont à la charge de l'employeur qui paie également les cotisations sociales. Le chauffeur reçoit chaque mois une fiche de paie.</p>
                 </div>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
@@ -31,8 +31,8 @@
                         <i class="fa fa-road fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Locataire en entreprise</h4>
-                    <p class="text-muted">L'autorisation de stationnement est au nom d'une société qui confie au conducteur un véhicule tout équipé taxi.
-Le locataire paie un loyer mensuel ( payable par semaine) ce loyer est TTC mais le chauffeur récupère la TVA.</p>
+                    <p class="p_justify text-muted">L'autorisation de stationnement est au nom d'une société qui confie au conducteur un véhicule tout équipé taxi.
+                    Le locataire paie un loyer mensuel ( payable par semaine) ce loyer est TTC mais le chauffeur récupère la TVA.</p>
                 </div>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
@@ -40,8 +40,8 @@ Le locataire paie un loyer mensuel ( payable par semaine) ce loyer est TTC mais 
                         <i class="fa fa-male fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Artisan</h4>
-                    <p class="text-muted">L'artisan achète ou obtient une licence d'artisan, il achète également son véhicule. L'autorisation de stationnement est à son nom. Les charges sociales, l'assurance, l'entretien, le carburant sont réglés par l'artisan. Il bénéficie de la détaxe sur les carburants. Il est travailleur indépendant.
-</p>
+                    <p class="p_justify text-muted">L'artisan achète ou obtient une licence d'artisan, il achète également son véhicule. L'autorisation de stationnement est à son nom. Les charges sociales, l'assurance, l'entretien, le carburant sont réglés par l'artisan. Il bénéficie de la détaxe sur les carburants. Il est travailleur indépendant.
+                    </p>
                 </div>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
@@ -49,8 +49,8 @@ Le locataire paie un loyer mensuel ( payable par semaine) ce loyer est TTC mais 
                         <i class="fa fa-euro fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Actionnaire</h4>
-                    <p class="text-muted">L'actionnaire achète une action dans une société déjà existante. Le prix d'une action est beaucoup moins élevé que celui d'une licence d'artisan. L'autorisation de stationnement est au nom d'une coopérative ainsi que la carte grise du véhicule. L'actionnaire paie à la coopérative une somme mensuelle équivalente aux charges sociales, aux frais de gestion et à l'assurance du véhicule.
-</p>
+                    <p class="p_justify text-muted">L'actionnaire achète une action dans une société déjà existante. Le prix d'une action est beaucoup moins élevé que celui d'une licence d'artisan. L'autorisation de stationnement est au nom d'une coopérative ainsi que la carte grise du véhicule. L'actionnaire paie à la coopérative une somme mensuelle équivalente aux charges sociales, aux frais de gestion et à l'assurance du véhicule.
+                    </p>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@ Le locataire paie un loyer mensuel ( payable par semaine) ce loyer est TTC mais 
                                     
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">• être titulaire du permis B depuis au moins trois ans (ce qui implique que l’âge minimal pour être taxi est de 21 ans) et ne pas avoir commis d’infraction ou de retrait du permis pour conduite en état d’ivresse ou autre délit grave, <br>• passer une visite médicale obligatoire,<br>• avoir un casier judiciaire vierge,<br>• avoir passé un diplôme de secourisme : la formation Prévention et secours civiques de niveau 1 (PSC1)</p>
+                                    <p class="text-muted">Etre titulaire du permis B depuis au moins trois ans (ce qui implique que l’âge minimal pour être taxi est de 21 ans) et ne pas avoir commis d’infraction ou de retrait du permis pour conduite en état d’ivresse ou autre délit grave, <br>• passer une visite médicale obligatoire,<br>• avoir un casier judiciaire vierge,<br>• avoir passé un diplôme de secourisme : la formation Prévention et secours civiques de niveau 1 (PSC1)</p>
                                 </div>
                             </div>
                         </li>

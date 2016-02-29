@@ -50,7 +50,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="<?= $this->url('home'); ?>">Formation Taxi</a>
+				<a class="navbar-brand page-scroll" href="<?= $this->url('home'); ?>">Formation BS Taxi</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
