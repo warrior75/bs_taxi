@@ -11,21 +11,19 @@
 
 
 <?php $this->start('main_content') ?>
-	<?php  ?>
 	    <?php if (isset($infos)) : ?>
 			<div class="col-md-4 col-md-offset-4">
             	<p class="bg-success" ><?php echo $infos; ?></p>
     		</div>
     	<?php endif; ?>
 
-	<?php if (isset($cour)) :?>
-			<div class="cour">
+
+		<?php if (isset($cour) && $cour['id'] != 0) :?>
+			<div>
 					<h2 class="cour_title"><?= $cour['title']; ?></h2>
 					<p class="cour_body"> <?= $cour['text_body'] ?> </p>
 			</div>       
-
-       
-		<?php else:?>
+		<?php else :?>
 			<table class="table" >
 				<tr>
 					<th>Nom</th>
@@ -51,9 +49,9 @@
 					<td>+33<?= $etudiant['phone']?></td>
                     <td><button class="btn btn-danger" >Supprimer</button></td>
 				</tr>
-				<? endforeach ; ?>
+				<?php endforeach ; ?>
 			</table>
-		<?php endif; ?>
+		<?php endif ; ?>
 
 		
 <?php $this->stop('main_content') ?>
