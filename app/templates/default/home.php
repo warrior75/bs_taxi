@@ -234,8 +234,11 @@
                 <div class="col-sm-6">
                     <h3>Nous trouver :</h3>
                     <p class="text-muted">BS Taxi<br>
-                                                    10 rue du Paradis <br>
-                                                     75010 Paris</p>
+                        10 rue du Paradis <br>
+                        75010 Paris <br>
+                        01.34.10.25.65
+                    </p>
+
                     <div id="map"></div>
 
                 </div>
