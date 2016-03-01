@@ -26,7 +26,7 @@
             <div class="row">
              <div class="col-md-8 col-md-offset-1">
                 <?php if (isset($errors['vide'])) : ?>
-                <p class="bg-danger" ><?php echo $errors['vide']; ?></p>
+                <p class="alert alert-danger alert-dismissable fade in" ><?php echo $errors['vide']; ?></p>
             <?php endif; ?>
 
             <form method="POST"  action="<?php echo $this->url('addLesson') ; ?>">

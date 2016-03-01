@@ -212,7 +212,7 @@
            <div class="panel-footer">
             <div class="input-group">
                 <form action="<?= $this->url('chat'); ?>" method="POST">
-                    <input id="btn-input" name="text_body" type="text" class="form-control input-sm" placeholder="Votre message . . ." required/>
+                <input id="btn-input" name="text_body" type="text" class="form-control input-sm" placeholder="Votre message . . ." required/>
                     <span class="input-group-btn">
                         <button class="btn btn-warning btn-sm" id="btn-chat" name="sendMessage">
                             Envoyer

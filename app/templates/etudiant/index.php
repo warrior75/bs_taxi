@@ -7,8 +7,8 @@
 
 <?php $this->start('main_content') ?>
 	    <?php if (isset($infos)) : ?>
-			<div class="col-md-4	 col-md-offset-4">
-            	<p class="bg-success" ><?php echo $infos; ?></p>
+			<div class="alert alert-success alert-dismissable fade in">
+            	<p><?php echo $infos; ?></p>
     		</div>
     	<?php endif; ?>
 
