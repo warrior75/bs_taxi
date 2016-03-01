@@ -43,7 +43,7 @@
 				<tr>
 					<td><?= $etudiant['firstname']; ?></td>
 					<td><?= $etudiant['lastname'] ;?></td>
-					<td><?= $etudiant['email'];?></td>
+					<td><a href="mailto:<?= $etudiant['email'];?> "><i class="fa fa-envelope"></i> <?= $etudiant['email'];?></a></td>
                     <td>
                         <div class="progress progress-striped active">
                         <?php $progress = ($summaryCours[$etudiant['id']]['nbCoursValide'] * 100)/$nbCoursTotal; ?>

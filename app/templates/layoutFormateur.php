@@ -147,8 +147,13 @@
                         <i class="fa fa-bell fa-fw"></i> Contact
                     </div>
                     <!-- /.panel-heading -->
-                    <div class="panel-body">
-                     
+                     <div class="panel-body">
+                       <ul>
+                            <li class="contact"><a href="#">Mohand (admin)</a></li>
+                            <li class="contact"><a href="#">Césario (formateur)</a></li>
+                            <li class="contact"><a href="#">Bilel (formateur) </a></li>
+
+                       </ul>
                     </div>
                     <!-- /.panel-body -->
                 </div>
